@@ -1,62 +1,50 @@
-module CleverApi 
-  class Authentication 
+# frozen_string_literal: true
 
-    attr_reader :access_token, :token
+require "clever_api/api"
+require "clever_api/data/tokens"
 
-    def initialize(token =  nil)
-      if token && access_token.nil? 
-        @token = token 
-        set_access_token
-      end
-    end
-    
-    def token_data
-      self.class.tokens.detect {|token_data| token_data.owner_id == token }
-    end
+module CleverApi
+  class Authentication
+    attr_accessor :configuration
 
-    def self.get_access_token_from_code(code)
-      response = CleverApi::Connection.basic_auth_post "https://clever.com/oauth/tokens", {code: code, grant_type: "authorization_code", redirect_uri: CleverApi.configuration.redirect_uri}
-      if response.success?
-        json = JSON::parse response.body
-        json.dig('data').map do |token_data| 
-          CleverApi::Data::Token.new token_data 
-        end
-      end
+    def initialize(configuration = CleverApi.configuration)
+      yield configuration if block_given?
+
+      @configuration = configuration
     end
 
-    def self.token(token_id)
-      response = CleverApi::Connection.basic_auth_get "https://clever.com/oauth/tokens", {district: token_id}
-      if response.success? 
-        json = JSON::parse response.body
-        json.dig('data').map do |token_data| 
-          CleverApi::Data::Token.new token_data 
-        end
-      end
+    def tokens
+      response = Api.new.tokens(
+        client_id: configuration.client_id,
+        client_secret: configuration.client_secret
+      )
+      CleverApi::Data::Tokens.new(response)
     end
 
-    def self.tokens 
-      @tokens ||= begin 
-        response = CleverApi::Connection.basic_auth_get "https://clever.com/oauth/tokens"
-        if response.success? 
-          json = JSON::parse response.body
-          json.dig('data').map do |token_data| 
-            CleverApi::Data::Token.new token_data 
-          end
-        end 
-      end
+    def token(district_id)
+      response = Api.new.tokens(
+        client_id: configuration.client_id,
+        client_secret: configuration.client_secret,
+        district: district_id
+      )
+      data = Array(response.body.dig("data")).first
+      CleverApi::Data::Token.new(data, response)
     end
 
-    private 
-
-    def set_access_token
-      if valid_token? 
-        @access_token = token_data.access_token
-      end
+    def tokeninfo(access_token)
+      response = Api.new.me(access_token: access_token)
+      data = response.body.dig("data")
+      CleverApi::Data::Token.new(data, response)
     end
 
-    def valid_token?
-      !!token_data
+    def me(access_token)
+      response = Api.new.me(access_token: access_token)
+      data = response.body.dig("data")
+      CleverApi::Data::Token.new(data, response)
     end
 
+    def inspect
+      "#<#{self.class.name}:0x#{(object_id * 2).to_s(16).rjust(16, "0")}>"
+    end
   end
 end

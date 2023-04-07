@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/courses/5970d4dd35e9e69741000160/schools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 10 Apr 2023 16:23:21 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '672'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"2a0-1nQS3s2mcLebAviylID3GA"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '38'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1153'
+      x-ratelimit-reset:
+      - '1681143855'
+      x-request-id:
+      - f2470ee1-ebe4-93cd-85a4-ff89de1891a7
+    body:
+      encoding: ASCII-8BIT
+      string: '{"links":[{"rel":"self","uri":"/v3.0/courses/5970d4dd35e9e69741000160/schools"}],"data":[{"data":{"created":"2017-03-28T16:16:24.878Z","district":"58da8a43cc70ab00017a1a87","ext":{"charter_school":"N"},"high_grade":"5","last_modified":"2023-04-09T16:06:54.403Z","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"low_grade":"TransitionalKindergarten","name":"Pineapple
+        Elementary School","phone":"(718) 555-4567","principal":{"email":"ceciliar@mailinator.com","name":"Cecilia
+        Roderick"},"school_number":"13K123","sis_id":"13K123","state_id":"30890","id":"58da8c58155b940248000007"},"uri":"/v3.0/schools/58da8c58155b940248000007"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/courses/5970d4dd35e9e69741000160/schools
+  recorded_at: Mon, 10 Apr 2023 16:23:21 GMT
+recorded_with: VCR 6.1.0

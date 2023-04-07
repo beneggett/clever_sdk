@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://clever.com/oauth/tokens?owner_type=district
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Basic MDk1YjgyY2JiZDhjNjg3MTRkMWM6NGIzMzg0ODljZWI0YmVjMzYyNDYxYTdjOTZlM2FhNjA5ZWZmZjA0OQ==
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1022'
+      vary:
+      - Accept-Encoding
+      date:
+      - Mon, 10 Apr 2023 16:23:19 GMT
+      x-powered-by:
+      - Express
+      x-request-id:
+      - 11efaf84-56ef-9acf-9cfd-3144317c63e2
+      etag:
+      - '"1383712"'
+      x-envoy-upstream-service-time:
+      - '14'
+      server:
+      - envoy
+      x-cache:
+      - Miss from cloudfront
+      via:
+      - 1.1 aa3540758216629202cc04ae30ab5604.cloudfront.net (CloudFront)
+      x-amz-cf-pop:
+      - SLC50-C1
+      x-amz-cf-id:
+      - uLq2K9REQFtqXmgWitEAd8GesPX9P0-p2VWzD-oXLvcPOEYahLT4dg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"62b4e190573f9600080cbf08","created":"2022-06-23T21:56:32.335Z","owner":{"type":"district","id":"58da8a43cc70ab00017a1a87"},"access_token":"a9d8f54716263679e484e2de6703c0a514c8dda7","scopes":["read:district_admins_basic","read:school_admins_basic","read:students_basic","read:teachers_basic","read:user_id"]},{"id":"62b4e1cf573f9600080cbf0a","created":"2022-06-23T21:57:35.193Z","owner":{"type":"district","id":"5d0a9e5d0958b300014e49d2"},"access_token":"bab5ba2d62af931d48420a70f6979c5bfa5ff7e3","scopes":["read:district_admins_basic","read:school_admins_basic","read:students_basic","read:teachers_basic","read:user_id"]},{"id":"62b4e0db12d490000725d958","created":"2022-06-23T21:53:31.725Z","owner":{"type":"district","id":"62817af12d430f5d54001f99"},"access_token":"2b907bfab3ac2c992a3b96d6aceef2d01fe817a5","scopes":["read:district_admins_basic","read:school_admins_basic","read:students_basic","read:teachers_basic","read:user_id"]}],"links":[{"rel":"self","uri":"/oauth/tokens?owner_type=district"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://clever.com/oauth/tokens?owner_type=district
+  recorded_at: Mon, 10 Apr 2023 16:23:19 GMT
+recorded_with: VCR 6.1.0

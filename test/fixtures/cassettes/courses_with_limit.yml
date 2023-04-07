@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/courses?limit=25
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 10 Apr 2023 16:23:19 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '4446'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"115e-/NPGPERIYb+NnWV6wHCyBw"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '22'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1173'
+      x-ratelimit-reset:
+      - '1681143855'
+      x-request-id:
+      - '091517d2-61c4-9091-9f7b-e48d71015af4'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"name":"Class 001, Homeroom","number":"1","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000160"},"uri":"/v3.0/courses/5970d4dd35e9e69741000160"},{"data":{"name":"Class
+        002, Homeroom","number":"2","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000161"},"uri":"/v3.0/courses/5970d4dd35e9e69741000161"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        003, Homeroom","number":"3","id":"5970d4dd35e9e69741000162"},"uri":"/v3.0/courses/5970d4dd35e9e69741000162"},{"data":{"number":"101","district":"58da8a43cc70ab00017a1a87","name":"Class
+        101, Homeroom","id":"5970d4dd35e9e69741000163"},"uri":"/v3.0/courses/5970d4dd35e9e69741000163"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        102, Homeroom","number":"102","id":"5970d4dd35e9e69741000164"},"uri":"/v3.0/courses/5970d4dd35e9e69741000164"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        103, Homeroom","number":"103","id":"5970d4dd35e9e69741000165"},"uri":"/v3.0/courses/5970d4dd35e9e69741000165"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        201, Homeroom","number":"201","id":"5970d4dd35e9e6974100016c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        202, Homeroom","number":"202","id":"5970d4dd35e9e6974100016d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        203, Homeroom","number":"203","id":"5970d4dd35e9e6974100016e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        301, Homeroom","number":"301","id":"5970d4dd35e9e6974100016f"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016f"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        302, Homeroom","number":"302","id":"5970d4dd35e9e69741000170"},"uri":"/v3.0/courses/5970d4dd35e9e69741000170"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        303, Homeroom","number":"303","id":"5970d4dd35e9e69741000171"},"uri":"/v3.0/courses/5970d4dd35e9e69741000171"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        401, Homeroom","number":"401","id":"5970d4dd35e9e69741000172"},"uri":"/v3.0/courses/5970d4dd35e9e69741000172"},{"data":{"number":"402","district":"58da8a43cc70ab00017a1a87","name":"Class
+        402, Homeroom","id":"5970d4dd35e9e69741000173"},"uri":"/v3.0/courses/5970d4dd35e9e69741000173"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        403, Homeroom","number":"403","id":"5970d4dd35e9e69741000174"},"uri":"/v3.0/courses/5970d4dd35e9e69741000174"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        501, Homeroom","number":"501","id":"5970d4dd35e9e69741000175"},"uri":"/v3.0/courses/5970d4dd35e9e69741000175"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        502, Homeroom","number":"502","id":"5970d4dd35e9e69741000176"},"uri":"/v3.0/courses/5970d4dd35e9e69741000176"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        503, Homeroom","number":"503","id":"5970d4dd35e9e69741000177"},"uri":"/v3.0/courses/5970d4dd35e9e69741000177"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        601, Homeroom","number":"601","id":"5970d4dd35e9e69741000178"},"uri":"/v3.0/courses/5970d4dd35e9e69741000178"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        602, Homeroom","number":"602","id":"5970d4dd35e9e69741000179"},"uri":"/v3.0/courses/5970d4dd35e9e69741000179"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        603, Homeroom","number":"603","id":"5970d4dd35e9e6974100017a"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017a"},{"data":{"number":"701","district":"58da8a43cc70ab00017a1a87","name":"Class
+        701, Homeroom","id":"5970d4dd35e9e6974100017b"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017b"},{"data":{"name":"Class
+        702, Homeroom","number":"702","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e6974100017c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        703, Homeroom","number":"703","id":"5970d4dd35e9e6974100017d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017d"},{"data":{"number":"801","district":"58da8a43cc70ab00017a1a87","name":"Class
+        801, Homeroom","id":"5970d4dd35e9e6974100017e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017e"}],"links":[{"rel":"self","uri":"/v3.0/courses?limit=25"},{"rel":"next","uri":"/v3.0/courses?limit=25&starting_after=5970d4dd35e9e6974100017e"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/courses?limit=25
+  recorded_at: Mon, 10 Apr 2023 16:23:19 GMT
+recorded_with: VCR 6.1.0
