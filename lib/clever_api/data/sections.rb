@@ -23,10 +23,21 @@ module CleverApi
       def each &block
         return enum_for :each unless block
 
-        Array(data)
+        data
           .lazy
           .map { |datum| CleverApi::Data::Section.new(datum.dig("data"), response) }
           .each(&block)
+      end
+
+      def all &block
+        return enum_for :all unless block
+
+        page = self
+        loop do
+          page.each(&block)
+          page = page.next
+          break if page.nil?
+        end
       end
 
       def next?

@@ -26,6 +26,7 @@ module CleverApi
         tokens = Array(data).lazy.map { |datum| CleverApi::Data::Token.new(datum, response) }
         tokens.each(&block)
       end
+      alias_method :all, :each
 
       def inspect
         "#<#{self.class.name}:0x#{(object_id * 2).to_s(16).rjust(16, "0")} tokens:#{data.count}>"

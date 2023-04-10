@@ -29,6 +29,17 @@ module CleverApi
           .each(&block)
       end
 
+      def all &block
+        return enum_for :all unless block
+
+        page = self
+        loop do
+          page.each(&block)
+          page = page.next
+          break if page.nil?
+        end
+      end
+
       def next?
         link = find_link("next")
         !link.nil?

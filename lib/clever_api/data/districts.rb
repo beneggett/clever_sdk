@@ -23,11 +23,12 @@ module CleverApi
       def each &block
         return enum_for :each unless block
 
-        Array(data)
+        data
           .lazy
           .map { |datum| CleverApi::Data::District.new(datum.dig("data"), response) }
           .each(&block)
       end
+      alias_method :all, :each
 
       def inspect
         "#<#{self.class.name}:0x#{(object_id * 2).to_s(16).rjust(16, "0")} districts:#{data.count}>"
