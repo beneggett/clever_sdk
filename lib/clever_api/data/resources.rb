@@ -18,7 +18,6 @@ module CleverApi
       def resources
         Array(response.body.dig("resources"))
       end
-      alias_method :to_a, :resources
 
       def each &block
         return enum_for :each unless block

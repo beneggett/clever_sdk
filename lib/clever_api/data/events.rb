@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "clever_api/data/school"
+require "clever_api/data/event"
 
 module CleverApi
   module Data
-    class Schools
+    class Events
       include Enumerable
 
       # private
@@ -24,7 +24,7 @@ module CleverApi
 
         data
           .lazy
-          .map { |datum| CleverApi::Data::School.new(datum.dig("data"), response) }
+          .map { |datum| CleverApi::Data::Event.new(datum.dig("data"), response) }
           .each(&block)
       end
 
@@ -66,7 +66,7 @@ module CleverApi
       end
 
       def inspect
-        "#<#{self.class.name}:0x#{(object_id * 2).to_s(16).rjust(16, "0")} schools:#{data.count}>"
+        "#<#{self.class.name}:0x#{(object_id * 2).to_s(16).rjust(16, "0")} events:#{data.count}>"
       end
 
       private

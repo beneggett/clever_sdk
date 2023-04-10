@@ -9,6 +9,7 @@ require "clever_api/data/schools"
 require "clever_api/data/sections"
 require "clever_api/data/terms"
 require "clever_api/data/users"
+require "clever_api/data/events"
 
 module CleverApi
   class Client
@@ -144,6 +145,19 @@ module CleverApi
       response = api.user_resources(access_token: access_token, id: id,
         limit: limit, starting_after: starting_after, ending_before: ending_before)
       CleverApi::Data::Resources.new(response)
+    end
+
+    def events(limit: nil, starting_after: nil, ending_before: nil, school: nil, record_type: nil)
+      response = api.events(access_token: access_token,
+        limit: limit, starting_after: starting_after, ending_before: ending_before,
+        school: school, record_type: record_type)
+      CleverApi::Data::Events.new(response)
+    end
+
+    def event(id)
+      response = api.event(access_token: access_token, id: id)
+      data = response.body.dig("data")
+      CleverApi::Data::Event.new(data, response)
     end
 
     def inspect

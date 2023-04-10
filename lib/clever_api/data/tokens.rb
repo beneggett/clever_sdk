@@ -18,7 +18,6 @@ module CleverApi
       def data
         @data ||= Array(response.body.dig("data"))
       end
-      alias_method :to_a, :data
 
       def each &block
         return enum_for :each unless block

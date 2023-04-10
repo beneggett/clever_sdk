@@ -1,20 +1,20 @@
 require "dotenv"
 Dotenv.load
 
-require "simplecov"
-require "pry"
-require "coveralls"
+# require "simplecov"
+# require "pry"
+# require "coveralls"
 
-Coveralls.wear!
+# Coveralls.wear!
 
-SimpleCov.formatters = [
-  Coveralls::SimpleCov::Formatter,
-  SimpleCov::Formatter::HTMLFormatter
-]
+# SimpleCov.formatters = [
+#   Coveralls::SimpleCov::Formatter,
+#   SimpleCov::Formatter::HTMLFormatter
+# ]
 
-SimpleCov.start do
-  skip_token "skip_test_coverage"
-end
+# SimpleCov.start do
+#   skip_token "skip_test_coverage"
+# end
 
 require "vcr"
 
