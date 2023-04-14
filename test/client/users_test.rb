@@ -1,17 +1,17 @@
 require "test_helper"
 
-class CleverApi::Client::UsersTest < CleverApi::Test
+class CleverSDK::Client::UsersTest < CleverSDK::Test
   def test_users
     VCR.use_cassette("users") do
-      users = CleverApi.client("TEST_TOKEN").users
+      users = CleverSDK.client("TEST_TOKEN").users
 
-      assert_kind_of CleverApi::Data::Users, users
+      assert_kind_of CleverSDK::Data::Users, users
       assert_equal 100, users.count
       assert users.next?
 
       user = users.first
 
-      assert_kind_of CleverApi::Data::User, user
+      assert_kind_of CleverSDK::Data::User, user
       assert_equal "58da8c63d7dc0ca0680003ed", user.id
       assert_equal "58da8a43cc70ab00017a1a87", user.district
       assert_equal "z.steve@example.net", user.email
@@ -25,15 +25,15 @@ class CleverApi::Client::UsersTest < CleverApi::Test
 
   def test_users_with_limit
     VCR.use_cassette("users_with_limit") do
-      users = CleverApi.client("TEST_TOKEN").users(limit: 25)
+      users = CleverSDK.client("TEST_TOKEN").users(limit: 25)
 
-      assert_kind_of CleverApi::Data::Users, users
+      assert_kind_of CleverSDK::Data::Users, users
       assert_equal 25, users.count
       assert users.next?
 
       user = users.first
 
-      assert_kind_of CleverApi::Data::User, user
+      assert_kind_of CleverSDK::Data::User, user
       assert_equal "58da8c63d7dc0ca0680003ed", user.id
       assert_equal "58da8a43cc70ab00017a1a87", user.district
       assert_equal "z.steve@example.net", user.email
@@ -47,15 +47,15 @@ class CleverApi::Client::UsersTest < CleverApi::Test
 
   def test_users_with_starting_after
     VCR.use_cassette("users_with_starting_after") do
-      users = CleverApi.client("TEST_TOKEN").users(starting_after: "58da8c63d7dc0ca068000478")
+      users = CleverSDK.client("TEST_TOKEN").users(starting_after: "58da8c63d7dc0ca068000478")
 
-      assert_kind_of CleverApi::Data::Users, users
+      assert_kind_of CleverSDK::Data::Users, users
       assert_equal 100, users.count
       assert users.next?
 
       user = users.first
 
-      assert_kind_of CleverApi::Data::User, user
+      assert_kind_of CleverSDK::Data::User, user
       assert_equal "58da8c63d7dc0ca06800047a", user.id
       assert_equal "58da8a43cc70ab00017a1a87", user.district
       assert_equal "o_george@example.org", user.email
@@ -69,15 +69,15 @@ class CleverApi::Client::UsersTest < CleverApi::Test
 
   def test_users_next
     VCR.use_cassette("users_next") do
-      users = CleverApi.client("TEST_TOKEN").users
+      users = CleverSDK.client("TEST_TOKEN").users
 
-      assert_kind_of CleverApi::Data::Users, users
+      assert_kind_of CleverSDK::Data::Users, users
       assert_equal 100, users.count
       assert users.next?
 
       user = users.first
 
-      assert_kind_of CleverApi::Data::User, user
+      assert_kind_of CleverSDK::Data::User, user
       assert_equal "58da8c63d7dc0ca0680003ed", user.id
       assert_equal "58da8a43cc70ab00017a1a87", user.district
       assert_equal "z.steve@example.net", user.email
@@ -88,13 +88,13 @@ class CleverApi::Client::UsersTest < CleverApi::Test
       assert_kind_of DateTime, user.last_modified
 
       next_users = users.next
-      assert_kind_of CleverApi::Data::Users, next_users
+      assert_kind_of CleverSDK::Data::Users, next_users
       assert_equal 100, next_users.count
       assert next_users.next?
 
       next_user = next_users.first
 
-      assert_kind_of CleverApi::Data::User, next_user
+      assert_kind_of CleverSDK::Data::User, next_user
       assert_equal "58da8c63d7dc0ca06800047a", next_user.id
       assert_equal "58da8a43cc70ab00017a1a87", next_user.district
       assert_equal "o_george@example.org", next_user.email

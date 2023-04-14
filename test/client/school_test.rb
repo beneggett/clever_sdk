@@ -1,11 +1,11 @@
 require "test_helper"
 
-class CleverApi::Client::SchoolTest < CleverApi::Test
+class CleverSDK::Client::SchoolTest < CleverSDK::Test
   def test_schools
     VCR.use_cassette("school") do
-      school = CleverApi.client("TEST_TOKEN").school("58da8c58155b940248000007")
+      school = CleverSDK.client("TEST_TOKEN").school("58da8c58155b940248000007")
 
-      assert_kind_of CleverApi::Data::School, school
+      assert_kind_of CleverSDK::Data::School, school
       assert_equal "58da8c58155b940248000007", school.id
       assert_equal "58da8a43cc70ab00017a1a87", school.district
       assert_equal "Pineapple Elementary School", school.name

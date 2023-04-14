@@ -1,9 +1,9 @@
 require "test_helper"
 
-class CleverApi::Api::UserTest < CleverApi::Test
+class CleverSDK::Api::UserTest < CleverSDK::Test
   def test_user
     VCR.use_cassette("user") do
-      response = CleverApi::Api.new.user(access_token: "TEST_TOKEN", id: "58da8c63d7dc0ca068000478")
+      response = CleverSDK::Api.new.user(access_token: "TEST_TOKEN", id: "58da8c63d7dc0ca068000478")
 
       assert_equal 200, response.code
       assert_equal "application/json; charset=utf-8", response.headers["content-type"]

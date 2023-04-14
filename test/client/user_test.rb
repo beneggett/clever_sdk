@@ -1,11 +1,11 @@
 require "test_helper"
 
-class CleverApi::Client::UserTest < CleverApi::Test
+class CleverSDK::Client::UserTest < CleverSDK::Test
   def test_users
     VCR.use_cassette("user") do
-      user = CleverApi.client("TEST_TOKEN").user("58da8c63d7dc0ca068000478")
+      user = CleverSDK.client("TEST_TOKEN").user("58da8c63d7dc0ca068000478")
 
-      assert_kind_of CleverApi::Data::User, user
+      assert_kind_of CleverSDK::Data::User, user
       assert_equal "58da8c63d7dc0ca068000478", user.id
       assert_equal "58da8a43cc70ab00017a1a87", user.district
       assert_equal "james.s@example.com", user.email

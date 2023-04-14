@@ -1,17 +1,17 @@
 require "test_helper"
 
-class CleverApi::Client::SchoolsTest < CleverApi::Test
+class CleverSDK::Client::SchoolsTest < CleverSDK::Test
   def test_schools
     VCR.use_cassette("schools") do
-      schools = CleverApi.client("TEST_TOKEN").schools
+      schools = CleverSDK.client("TEST_TOKEN").schools
 
-      assert_kind_of CleverApi::Data::Schools, schools
+      assert_kind_of CleverSDK::Data::Schools, schools
       assert_equal 4, schools.count
       refute schools.next?
 
       school = schools.first
 
-      assert_kind_of CleverApi::Data::School, school
+      assert_kind_of CleverSDK::Data::School, school
       assert_equal "58da8c58155b940248000007", school.id
       assert_equal "58da8a43cc70ab00017a1a87", school.district
       assert_equal "Pineapple Elementary School", school.name
@@ -34,9 +34,9 @@ class CleverApi::Client::SchoolsTest < CleverApi::Test
 
   def test_schools_with_limit
     VCR.use_cassette("schools_with_limit") do
-      schools = CleverApi.client("TEST_TOKEN").schools(limit: 3)
+      schools = CleverSDK.client("TEST_TOKEN").schools(limit: 3)
 
-      assert_kind_of CleverApi::Data::Schools, schools
+      assert_kind_of CleverSDK::Data::Schools, schools
       assert_equal 3, schools.count
       assert schools.next?
     end
@@ -44,9 +44,9 @@ class CleverApi::Client::SchoolsTest < CleverApi::Test
 
   def test_schools_with_starting_after
     VCR.use_cassette("schools_with_starting_after") do
-      schools = CleverApi.client("TEST_TOKEN").schools(starting_after: "58da8c58155b940248000007")
+      schools = CleverSDK.client("TEST_TOKEN").schools(starting_after: "58da8c58155b940248000007")
 
-      assert_kind_of CleverApi::Data::Schools, schools
+      assert_kind_of CleverSDK::Data::Schools, schools
       assert_equal 3, schools.count
       refute schools.next?
     end
@@ -54,15 +54,15 @@ class CleverApi::Client::SchoolsTest < CleverApi::Test
 
   def test_schools_next
     VCR.use_cassette("schools_next") do
-      schools = CleverApi.client("TEST_TOKEN").schools(limit: 3)
+      schools = CleverSDK.client("TEST_TOKEN").schools(limit: 3)
 
-      assert_kind_of CleverApi::Data::Schools, schools
+      assert_kind_of CleverSDK::Data::Schools, schools
       assert_equal 3, schools.count
       assert schools.next?
 
       school = schools.first
 
-      assert_kind_of CleverApi::Data::School, school
+      assert_kind_of CleverSDK::Data::School, school
       assert_equal "58da8c58155b940248000007", school.id
       assert_equal "58da8a43cc70ab00017a1a87", school.district
       assert_equal "Pineapple Elementary School", school.name
@@ -82,13 +82,13 @@ class CleverApi::Client::SchoolsTest < CleverApi::Test
       assert_kind_of DateTime, school.last_modified
 
       next_schools = schools.next
-      assert_kind_of CleverApi::Data::Schools, next_schools
+      assert_kind_of CleverSDK::Data::Schools, next_schools
       assert_equal 1, next_schools.count
       refute next_schools.next?
 
       next_school = next_schools.first
 
-      assert_kind_of CleverApi::Data::School, next_school
+      assert_kind_of CleverSDK::Data::School, next_school
       assert_equal "58da8c58155b94024800000a", next_school.id
       assert_equal "58da8a43cc70ab00017a1a87", next_school.district
       assert_equal "Rockaway Beach Middle School Campus 3", next_school.name

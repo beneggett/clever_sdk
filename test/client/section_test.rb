@@ -1,11 +1,11 @@
 require "test_helper"
 
-class CleverApi::Client::SectionTest < CleverApi::Test
+class CleverSDK::Client::SectionTest < CleverSDK::Test
   def test_sections
     VCR.use_cassette("section") do
-      section = CleverApi.client("TEST_TOKEN").section("58da8c6a894273be68000182")
+      section = CleverSDK.client("TEST_TOKEN").section("58da8c6a894273be68000182")
 
-      assert_kind_of CleverApi::Data::Section, section
+      assert_kind_of CleverSDK::Data::Section, section
       assert_equal "58da8c6a894273be68000182", section.id
       assert_equal "58da8a43cc70ab00017a1a87", section.district
       assert_equal "5970d4de35e9e69741000277", section.course

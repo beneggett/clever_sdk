@@ -1,17 +1,17 @@
 require "test_helper"
 
-class CleverApi::Client::SectionsTest < CleverApi::Test
+class CleverSDK::Client::SectionsTest < CleverSDK::Test
   def test_sections
     VCR.use_cassette("sections") do
-      sections = CleverApi.client("TEST_TOKEN").sections
+      sections = CleverSDK.client("TEST_TOKEN").sections
 
-      assert_kind_of CleverApi::Data::Sections, sections
+      assert_kind_of CleverSDK::Data::Sections, sections
       assert_equal 100, sections.count
       assert sections.next?
 
       section = sections.first
 
-      assert_kind_of CleverApi::Data::Section, section
+      assert_kind_of CleverSDK::Data::Section, section
       assert_equal "58da8c6a894273be68000182", section.id
       assert_equal "58da8a43cc70ab00017a1a87", section.district
       assert_equal "5970d4de35e9e69741000277", section.course
@@ -34,9 +34,9 @@ class CleverApi::Client::SectionsTest < CleverApi::Test
 
   def test_sections_with_limit
     VCR.use_cassette("sections_with_limit") do
-      sections = CleverApi.client("TEST_TOKEN").sections(limit: 25)
+      sections = CleverSDK.client("TEST_TOKEN").sections(limit: 25)
 
-      assert_kind_of CleverApi::Data::Sections, sections
+      assert_kind_of CleverSDK::Data::Sections, sections
       assert_equal 25, sections.count
       assert sections.next?
     end
@@ -44,15 +44,15 @@ class CleverApi::Client::SectionsTest < CleverApi::Test
 
   def test_sections_with_starting_after
     VCR.use_cassette("sections_with_starting_after") do
-      sections = CleverApi.client("TEST_TOKEN").sections(starting_after: "58da8c6b894273be68000255")
+      sections = CleverSDK.client("TEST_TOKEN").sections(starting_after: "58da8c6b894273be68000255")
 
-      assert_kind_of CleverApi::Data::Sections, sections
+      assert_kind_of CleverSDK::Data::Sections, sections
       assert_equal 100, sections.count
       assert sections.next?
 
       section = sections.first
 
-      assert_kind_of CleverApi::Data::Section, section
+      assert_kind_of CleverSDK::Data::Section, section
       assert_equal "58da8c6b894273be68000256", section.id
       assert_equal "58da8a43cc70ab00017a1a87", section.district
       assert_equal "5970d4dd35e9e69741000244", section.course
@@ -75,15 +75,15 @@ class CleverApi::Client::SectionsTest < CleverApi::Test
 
   def test_sections_next
     VCR.use_cassette("sections_next") do
-      sections = CleverApi.client("TEST_TOKEN").sections
+      sections = CleverSDK.client("TEST_TOKEN").sections
 
-      assert_kind_of CleverApi::Data::Sections, sections
+      assert_kind_of CleverSDK::Data::Sections, sections
       assert_equal 100, sections.count
       assert sections.next?
 
       section = sections.first
 
-      assert_kind_of CleverApi::Data::Section, section
+      assert_kind_of CleverSDK::Data::Section, section
       assert_equal "58da8c6a894273be68000182", section.id
       assert_equal "58da8a43cc70ab00017a1a87", section.district
       assert_equal "5970d4de35e9e69741000277", section.course
@@ -103,13 +103,13 @@ class CleverApi::Client::SectionsTest < CleverApi::Test
       assert_kind_of DateTime, section.last_modified
 
       next_sections = sections.next
-      assert_kind_of CleverApi::Data::Sections, next_sections
+      assert_kind_of CleverSDK::Data::Sections, next_sections
       assert_equal 100, next_sections.count
       assert next_sections.next?
 
       next_section = next_sections.first
 
-      assert_kind_of CleverApi::Data::Section, next_section
+      assert_kind_of CleverSDK::Data::Section, next_section
       assert_equal "58da8c6b894273be68000256", next_section.id
       assert_equal "58da8a43cc70ab00017a1a87", next_section.district
       assert_equal "5970d4dd35e9e69741000244", next_section.course

@@ -1,16 +1,16 @@
 require "test_helper"
 
-class CleverApi::Authentication::TokensTest < CleverApi::Test
+class CleverSDK::Authentication::TokensTest < CleverSDK::Test
   def test_tokens
     VCR.use_cassette("tokens") do
-      tokens = CleverApi.authentication.tokens
+      tokens = CleverSDK.authentication.tokens
 
-      assert_kind_of CleverApi::Data::Tokens, tokens
+      assert_kind_of CleverSDK::Data::Tokens, tokens
       assert_equal 3, tokens.count
 
       token = tokens.first
 
-      assert_kind_of CleverApi::Data::Token, token
+      assert_kind_of CleverSDK::Data::Token, token
       assert_equal "62b4e190573f9600080cbf08", token.id
       assert_equal "a9d8f54716263679e484e2de6703c0a514c8dda7", token.access_token
       assert_equal "district", token.owner_type
@@ -27,9 +27,9 @@ class CleverApi::Authentication::TokensTest < CleverApi::Test
 
   def test_token
     VCR.use_cassette("token") do
-      token = CleverApi.authentication.token("58da8a43cc70ab00017a1a87")
+      token = CleverSDK.authentication.token("58da8a43cc70ab00017a1a87")
 
-      assert_kind_of CleverApi::Data::Token, token
+      assert_kind_of CleverSDK::Data::Token, token
       assert_equal "62b4e190573f9600080cbf08", token.id
       assert_equal "a9d8f54716263679e484e2de6703c0a514c8dda7", token.access_token
       assert_equal "district", token.owner_type

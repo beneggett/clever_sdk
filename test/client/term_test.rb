@@ -1,11 +1,11 @@
 require "test_helper"
 
-class CleverApi::Client::TermTest < CleverApi::Test
+class CleverSDK::Client::TermTest < CleverSDK::Test
   def test_terms
     VCR.use_cassette("term") do
-      term = CleverApi.client("TEST_TOKEN").term("5b42365868c8d6104f634d32")
+      term = CleverSDK.client("TEST_TOKEN").term("5b42365868c8d6104f634d32")
 
-      assert_kind_of CleverApi::Data::Term, term
+      assert_kind_of CleverSDK::Data::Term, term
       assert_equal "5b42365868c8d6104f634d32", term.id
       assert_equal "58da8a43cc70ab00017a1a87", term.district
       assert_equal "S1", term.name

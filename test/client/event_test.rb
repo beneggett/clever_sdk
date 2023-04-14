@@ -1,15 +1,15 @@
 require "test_helper"
 
-class CleverApi::Client::EventTest < CleverApi::Test
+class CleverSDK::Client::EventTest < CleverSDK::Test
   def test_events
     VCR.use_cassette("event") do
-      event = CleverApi.client("TEST_TOKEN").event("640df94fd306111b2385ee9d")
+      event = CleverSDK.client("TEST_TOKEN").event("640df94fd306111b2385ee9d")
 
-      assert_kind_of CleverApi::Data::Event, event
+      assert_kind_of CleverSDK::Data::Event, event
       assert_equal "640df94fd306111b2385ee9d", event.id
       assert_equal "districts.updated", event.type
       assert_kind_of DateTime, event.created
-      assert_kind_of CleverApi::Data::District, event.object
+      assert_kind_of CleverSDK::Data::District, event.object
       assert_equal "2023-03-09T22:46:43.807Z", event.previous_attributes.dig("last_sync")
 
       district = event.object
@@ -25,7 +25,7 @@ class CleverApi::Client::EventTest < CleverApi::Test
       assert_kind_of Date, district.launch_date
       assert_nil district.pause_start
       assert_nil district.pause_end
-      assert_kind_of CleverApi::Data::District::Contact, district.district_contact
+      assert_kind_of CleverSDK::Data::District::Contact, district.district_contact
       assert_equal "58da8a43ca1f1e0001aa4220", district.district_contact.id
       assert_equal "Amelie", district.district_contact.first_name
       assert_equal "Zeng", district.district_contact.last_name
