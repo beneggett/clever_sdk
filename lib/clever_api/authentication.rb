@@ -32,7 +32,7 @@ module CleverApi
     end
 
     def tokeninfo(access_token)
-      response = Api.new.me(access_token: access_token)
+      response = Api.new.tokeninfo(access_token: access_token)
       data = response.body.dig("data")
       CleverApi::Data::Token.new(data, response)
     end

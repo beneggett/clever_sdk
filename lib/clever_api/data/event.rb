@@ -79,8 +79,6 @@ module CleverApi
           CleverApi::Data::Term
         when "users"
           CleverApi::Data::User
-        else
-          nil
         end
       end
 
