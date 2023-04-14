@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::ResourcesTest < CleverSDK::Test
   def test_resources_app
-    VCR.use_cassette("resources_app") do
+    VCR.use_cassette("client/resources_app") do
       resources = CleverSDK.client("TEST_TOKEN").resources
 
       assert_kind_of CleverSDK::Data::Resources, resources
@@ -12,7 +12,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_student
-    VCR.use_cassette("resources_student") do
+    VCR.use_cassette("client/resources_student") do
       error = assert_raises CleverSDK::Error do
         CleverSDK.client("ilc_DEMO_STUDENT_TOKEN").resources
       end
@@ -23,7 +23,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_teacher
-    VCR.use_cassette("resources_teacher") do
+    VCR.use_cassette("client/resources_teacher") do
       error = assert_raises CleverSDK::Error do
         CleverSDK.client("ilc_DEMO_TEACHER_TOKEN").resources
       end
@@ -34,7 +34,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_school_admin
-    VCR.use_cassette("resources_school_admin") do
+    VCR.use_cassette("client/resources_school_admin") do
       error = assert_raises CleverSDK::Error do
         CleverSDK.client("ilc_DEMO_SCHOOL_ADMIN_TOKEN").resources
       end
@@ -45,7 +45,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_district_admin
-    VCR.use_cassette("resources_district_admin") do
+    VCR.use_cassette("client/resources_district_admin") do
       error = assert_raises CleverSDK::Error do
         CleverSDK.client("ilc_DEMO_DISTRICT_ADMIN_TOKEN").resources
       end

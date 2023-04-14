@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::TermsTest < CleverSDK::Test
   def test_terms
-    VCR.use_cassette("terms") do
+    VCR.use_cassette("client/terms") do
       terms = CleverSDK.client("TEST_TOKEN").terms
 
       assert_kind_of CleverSDK::Data::Terms, terms
@@ -21,7 +21,7 @@ class CleverSDK::Client::TermsTest < CleverSDK::Test
   end
 
   def test_terms_with_limit
-    VCR.use_cassette("terms_with_limit") do
+    VCR.use_cassette("client/terms_with_limit") do
       terms = CleverSDK.client("TEST_TOKEN").terms(limit: 3)
 
       assert_kind_of CleverSDK::Data::Terms, terms
@@ -31,7 +31,7 @@ class CleverSDK::Client::TermsTest < CleverSDK::Test
   end
 
   def test_terms_with_starting_after
-    VCR.use_cassette("terms_with_starting_after") do
+    VCR.use_cassette("client/terms_with_starting_after") do
       terms = CleverSDK.client("TEST_TOKEN").terms(starting_after: "5b42365868c8d6104f634d34")
 
       assert_kind_of CleverSDK::Data::Terms, terms
@@ -41,7 +41,7 @@ class CleverSDK::Client::TermsTest < CleverSDK::Test
   end
 
   def test_terms_next
-    VCR.use_cassette("terms_next") do
+    VCR.use_cassette("client/terms_next") do
       terms = CleverSDK.client("TEST_TOKEN").terms(limit: 3)
 
       assert_kind_of CleverSDK::Data::Terms, terms

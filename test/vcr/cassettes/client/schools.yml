@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/schools
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '2383'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"94f-jOfrC/Ikr2+EZIyj1TrMqA"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '22'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1088'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 0eb3a65b-92a9-9dba-aa69-e2bc3dcc2a58
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"high_grade":"5","school_number":"13K123","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"last_modified":"2023-04-23T16:07:28.860Z","name":"Pineapple
+        Elementary School","phone":"(718) 555-4567","district":"58da8a43cc70ab00017a1a87","sis_id":"13K123","created":"2023-04-12T23:04:53.490Z","ext":{"charter_school":"N"},"principal":{"email":"ceciliar@mailinator.com","name":"Cecilia
+        Roderick"},"low_grade":"TransitionalKindergarten","state_id":"30890","id":"58da8c58155b940248000007"},"uri":"/v3.0/schools/58da8c58155b940248000007"},{"data":{"created":"2023-04-12T23:04:53.492Z","last_modified":"2023-04-23T16:07:28.863Z","name":"Rockaway
+        Beach Middle School","ext":{"charter_school":"Y"},"school_number":"27Q321","phone":"(718)
+        555-8989","sis_id":"27Q321","low_grade":"6","state_id":"412","high_grade":"8","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"district":"58da8a43cc70ab00017a1a87","id":"58da8c58155b940248000008"},"uri":"/v3.0/schools/58da8c58155b940248000008"},{"data":{"district":"58da8a43cc70ab00017a1a87","low_grade":"6","principal":{"email":"lspringsteen@mailinator.com","name":"Leonard
+        Springsteen"},"phone":"(718) 555-8989","high_grade":"8","state_id":"413","school_number":"2ZR351","sis_id":"2ZR351","ext":{"charter_school":""},"last_modified":"2023-04-20T16:08:58.898Z","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"name":"Rockaway
+        Beach Middle School Campus 2","created":"2023-04-12T23:04:53.494Z","id":"58da8c58155b940248000009"},"uri":"/v3.0/schools/58da8c58155b940248000009"},{"data":{"high_grade":"8","sis_id":"2ZT381","principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"2ZT381","ext":{"charter_school":""},"district":"58da8a43cc70ab00017a1a87","name":"Rockaway
+        Beach Middle School Campus 3","low_grade":"6","phone":"(718) 555-8989","last_modified":"2023-04-20T16:08:58.902Z","created":"2023-04-12T23:04:53.496Z","state_id":"414","location":{"state":"NY","zip":"11693","address":"322
+        Old Beach 88th Street","city":"Rockaway Beach"},"id":"58da8c58155b94024800000a"},"uri":"/v3.0/schools/58da8c58155b94024800000a"}],"links":[{"rel":"self","uri":"/v3.0/schools"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/schools
+  recorded_at: Mon, 24 Apr 2023 22:43:42 GMT
+recorded_with: VCR 6.1.0

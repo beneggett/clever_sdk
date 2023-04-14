@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "clever_sdk/data/course/refs"
+
 module CleverSDK
   module Data
     class Course
@@ -26,6 +28,10 @@ module CleverSDK
 
       def number
         data.dig("number")
+      end
+
+      def refs
+        @refs ||= CleverSDK::Data::Course::Refs.new(self)
       end
 
       def inspect

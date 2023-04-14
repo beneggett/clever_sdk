@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+require "clever_sdk/data/user/contact_role"
+require "clever_sdk/data/user/district_admin_role"
+require "clever_sdk/data/user/staff_role"
+require "clever_sdk/data/user/student_role"
+require "clever_sdk/data/user/teacher_role"
+require "clever_sdk/data/user/refs"
+
 module CleverSDK
   module Data
     class User
@@ -50,6 +57,60 @@ module CleverSDK
         DateTime.parse(data.dig("last_modified"))
       rescue
         nil
+      end
+
+      def contact?
+        !roles.dig("contact").nil?
+      end
+
+      def contact
+        return unless contact?
+
+        @contact ||= CleverSDK::Data::User::ContactRole.new(self)
+      end
+
+      def district_admin?
+        !roles.dig("district_admin").nil?
+      end
+
+      def district_admin
+        return unless district_admin?
+
+        @district_admin ||= CleverSDK::Data::User::DistrictAdminRole.new(self)
+      end
+
+      def staff?
+        !roles.dig("staff").nil?
+      end
+
+      def staff
+        return unless staff?
+
+        @staff ||= CleverSDK::Data::User::StaffRole.new(self)
+      end
+
+      def teacher?
+        !roles.dig("teacher").nil?
+      end
+
+      def teacher
+        return unless teacher?
+
+        @teacher ||= CleverSDK::Data::User::TeacherRole.new(self)
+      end
+
+      def student?
+        !roles.dig("student").nil?
+      end
+
+      def student
+        return unless student?
+
+        @student ||= CleverSDK::Data::User::StudentRole.new(self)
+      end
+
+      def refs
+        @refs ||= CleverSDK::Data::User::Refs.new(self)
       end
 
       def inspect

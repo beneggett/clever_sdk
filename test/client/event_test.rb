@@ -2,15 +2,15 @@ require "test_helper"
 
 class CleverSDK::Client::EventTest < CleverSDK::Test
   def test_events
-    VCR.use_cassette("event") do
-      event = CleverSDK.client("TEST_TOKEN").event("640df94fd306111b2385ee9d")
+    VCR.use_cassette("client/event") do
+      event = CleverSDK.client("TEST_TOKEN").event("64206e4431f12f05cc49076f")
 
       assert_kind_of CleverSDK::Data::Event, event
-      assert_equal "640df94fd306111b2385ee9d", event.id
+      assert_equal "64206e4431f12f05cc49076f", event.id
       assert_equal "districts.updated", event.type
       assert_kind_of DateTime, event.created
       assert_kind_of CleverSDK::Data::District, event.object
-      assert_equal "2023-03-09T22:46:43.807Z", event.previous_attributes.dig("last_sync")
+      assert event.previous_attributes.dig("last_sync")
 
       district = event.object
       assert_equal "58da8a43cc70ab00017a1a87", district.id

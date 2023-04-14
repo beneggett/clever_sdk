@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "clever_sdk/data/school/refs"
+
 module CleverSDK
   module Data
     class School
@@ -70,6 +72,10 @@ module CleverSDK
         DateTime.parse(data.dig("last_modified"))
       rescue
         nil
+      end
+
+      def refs
+        @refs ||= CleverSDK::Data::School::Refs.new(self)
       end
 
       def inspect

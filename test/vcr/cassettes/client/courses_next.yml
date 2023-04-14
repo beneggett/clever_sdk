@@ -1,0 +1,325 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/courses
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:34 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '17675'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"450b-Y76vSj5vZX/pWJ5vw1gMyA"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '22'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1145'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 9003133d-cf47-9c95-9ba4-cfb489b03274
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        001, Homeroom","number":"1","id":"5970d4dd35e9e69741000160"},"uri":"/v3.0/courses/5970d4dd35e9e69741000160"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        002, Homeroom","number":"2","id":"5970d4dd35e9e69741000161"},"uri":"/v3.0/courses/5970d4dd35e9e69741000161"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        003, Homeroom","number":"3","id":"5970d4dd35e9e69741000162"},"uri":"/v3.0/courses/5970d4dd35e9e69741000162"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        101, Homeroom","number":"101","id":"5970d4dd35e9e69741000163"},"uri":"/v3.0/courses/5970d4dd35e9e69741000163"},{"data":{"number":"102","district":"58da8a43cc70ab00017a1a87","name":"Class
+        102, Homeroom","id":"5970d4dd35e9e69741000164"},"uri":"/v3.0/courses/5970d4dd35e9e69741000164"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        103, Homeroom","number":"103","id":"5970d4dd35e9e69741000165"},"uri":"/v3.0/courses/5970d4dd35e9e69741000165"},{"data":{"name":"Class
+        201, Homeroom","number":"201","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e6974100016c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        202, Homeroom","number":"202","id":"5970d4dd35e9e6974100016d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        203, Homeroom","number":"203","id":"5970d4dd35e9e6974100016e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        301, Homeroom","number":"301","id":"5970d4dd35e9e6974100016f"},"uri":"/v3.0/courses/5970d4dd35e9e6974100016f"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        302, Homeroom","number":"302","id":"5970d4dd35e9e69741000170"},"uri":"/v3.0/courses/5970d4dd35e9e69741000170"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        303, Homeroom","number":"303","id":"5970d4dd35e9e69741000171"},"uri":"/v3.0/courses/5970d4dd35e9e69741000171"},{"data":{"name":"Class
+        401, Homeroom","number":"401","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000172"},"uri":"/v3.0/courses/5970d4dd35e9e69741000172"},{"data":{"name":"Class
+        402, Homeroom","number":"402","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000173"},"uri":"/v3.0/courses/5970d4dd35e9e69741000173"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        403, Homeroom","number":"403","id":"5970d4dd35e9e69741000174"},"uri":"/v3.0/courses/5970d4dd35e9e69741000174"},{"data":{"name":"Class
+        501, Homeroom","number":"501","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000175"},"uri":"/v3.0/courses/5970d4dd35e9e69741000175"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        502, Homeroom","number":"502","id":"5970d4dd35e9e69741000176"},"uri":"/v3.0/courses/5970d4dd35e9e69741000176"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        503, Homeroom","number":"503","id":"5970d4dd35e9e69741000177"},"uri":"/v3.0/courses/5970d4dd35e9e69741000177"},{"data":{"number":"601","district":"58da8a43cc70ab00017a1a87","name":"Class
+        601, Homeroom","id":"5970d4dd35e9e69741000178"},"uri":"/v3.0/courses/5970d4dd35e9e69741000178"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        602, Homeroom","number":"602","id":"5970d4dd35e9e69741000179"},"uri":"/v3.0/courses/5970d4dd35e9e69741000179"},{"data":{"number":"603","district":"58da8a43cc70ab00017a1a87","name":"Class
+        603, Homeroom","id":"5970d4dd35e9e6974100017a"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017a"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        701, Homeroom","number":"701","id":"5970d4dd35e9e6974100017b"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017b"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        702, Homeroom","number":"702","id":"5970d4dd35e9e6974100017c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        703, Homeroom","number":"703","id":"5970d4dd35e9e6974100017d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        801, Homeroom","number":"801","id":"5970d4dd35e9e6974100017e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017e"},{"data":{"number":"802","district":"58da8a43cc70ab00017a1a87","name":"Class
+        802, Homeroom","id":"5970d4dd35e9e6974100017f"},"uri":"/v3.0/courses/5970d4dd35e9e6974100017f"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        803, Homeroom","number":"803","id":"5970d4dd35e9e69741000180"},"uri":"/v3.0/courses/5970d4dd35e9e69741000180"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Class
+        902, Homeroom","number":"902","id":"5970d4dd35e9e69741000182"},"uri":"/v3.0/courses/5970d4dd35e9e69741000182"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Creative
+        Writing Elective","number":"610","id":"5970d4dd35e9e69741000188"},"uri":"/v3.0/courses/5970d4dd35e9e69741000188"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Drama
+        Elective","number":"611","id":"5970d4dd35e9e6974100018d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100018d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Eighth
+        Grade Advisory","number":"802","id":"5970d4dd35e9e69741000193"},"uri":"/v3.0/courses/5970d4dd35e9e69741000193"},{"data":{"name":"Eighth
+        Grade Advisory","number":"803","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000194"},"uri":"/v3.0/courses/5970d4dd35e9e69741000194"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 601","number":"601","id":"5970d4dd35e9e69741000199"},"uri":"/v3.0/courses/5970d4dd35e9e69741000199"},{"data":{"name":"English,
+        Class 602","number":"602","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e6974100019a"},"uri":"/v3.0/courses/5970d4dd35e9e6974100019a"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 603","number":"603","id":"5970d4dd35e9e6974100019b"},"uri":"/v3.0/courses/5970d4dd35e9e6974100019b"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 701","number":"701","id":"5970d4dd35e9e6974100019c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100019c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 702","number":"702","id":"5970d4dd35e9e6974100019d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100019d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 703","number":"703","id":"5970d4dd35e9e6974100019e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100019e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 801","number":"801","id":"5970d4dd35e9e6974100019f"},"uri":"/v3.0/courses/5970d4dd35e9e6974100019f"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 802","number":"802","id":"5970d4dd35e9e697410001a0"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a0"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"English,
+        Class 803","number":"803","id":"5970d4dd35e9e697410001a1"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a1"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Film
+        Crew Elective","number":"612","id":"5970d4dd35e9e697410001a5"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a5"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Film
+        Elective","number":"613","id":"5970d4dd35e9e697410001a6"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a6"},{"data":{"number":"701","district":"58da8a43cc70ab00017a1a87","name":"Fine
+        Arts, Class 701","id":"5970d4dd35e9e697410001a7"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a7"},{"data":{"number":"702","district":"58da8a43cc70ab00017a1a87","name":"Fine
+        Arts, Class 702","id":"5970d4dd35e9e697410001a8"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a8"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Fine
+        Arts, Class 703","number":"703","id":"5970d4dd35e9e697410001a9"},"uri":"/v3.0/courses/5970d4dd35e9e697410001a9"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Fine
+        Arts, Class 801","number":"801","id":"5970d4dd35e9e697410001aa"},"uri":"/v3.0/courses/5970d4dd35e9e697410001aa"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Fine
+        Arts, Class 802","number":"802","id":"5970d4dd35e9e697410001ab"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ab"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Fine
+        Arts, Class 803","number":"803","id":"5970d4dd35e9e697410001ac"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ac"},{"data":{"name":"Fitness
+        Elective","number":"614","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001ad"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ad"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Math, Class 101","number":"101","id":"5970d4dd35e9e697410001b6"},"uri":"/v3.0/courses/5970d4dd35e9e697410001b6"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Math, Class 102","number":"102","id":"5970d4dd35e9e697410001b7"},"uri":"/v3.0/courses/5970d4dd35e9e697410001b7"},{"data":{"number":"103","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Math, Class 103","id":"5970d4dd35e9e697410001b8"},"uri":"/v3.0/courses/5970d4dd35e9e697410001b8"},{"data":{"number":"101","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Music, Class 101","id":"5970d4dd35e9e697410001b9"},"uri":"/v3.0/courses/5970d4dd35e9e697410001b9"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Music, Class 102","number":"102","id":"5970d4dd35e9e697410001ba"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ba"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Music, Class 103","number":"103","id":"5970d4dd35e9e697410001bb"},"uri":"/v3.0/courses/5970d4dd35e9e697410001bb"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Reading, Class 101","number":"101","id":"5970d4dd35e9e697410001bc"},"uri":"/v3.0/courses/5970d4dd35e9e697410001bc"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Reading, Class 102","number":"102","id":"5970d4dd35e9e697410001bd"},"uri":"/v3.0/courses/5970d4dd35e9e697410001bd"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Reading, Class 103","number":"103","id":"5970d4dd35e9e697410001be"},"uri":"/v3.0/courses/5970d4dd35e9e697410001be"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Science, Class 101","number":"101","id":"5970d4dd35e9e697410001bf"},"uri":"/v3.0/courses/5970d4dd35e9e697410001bf"},{"data":{"name":"Grade
+        1 Science, Class 102","number":"102","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001c0"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c0"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Science, Class 103","number":"103","id":"5970d4dd35e9e697410001c1"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c1"},{"data":{"name":"Grade
+        1 Social Studies, Class 101","number":"101","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001c2"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c2"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Social Studies, Class 102","number":"102","id":"5970d4dd35e9e697410001c3"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c3"},{"data":{"number":"103","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        1 Social Studies, Class 103","id":"5970d4dd35e9e697410001c4"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c4"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Math, Class 201","number":"201","id":"5970d4dd35e9e697410001c5"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c5"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Math, Class 202","number":"202","id":"5970d4dd35e9e697410001c6"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c6"},{"data":{"name":"Grade
+        2 Math, Class 203","number":"203","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001c7"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c7"},{"data":{"number":"201","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Music, Class 201","id":"5970d4dd35e9e697410001c8"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c8"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Music, Class 202","number":"202","id":"5970d4dd35e9e697410001c9"},"uri":"/v3.0/courses/5970d4dd35e9e697410001c9"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Music, Class 203","number":"203","id":"5970d4dd35e9e697410001ca"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ca"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Reading, Class 201","number":"201","id":"5970d4dd35e9e697410001cb"},"uri":"/v3.0/courses/5970d4dd35e9e697410001cb"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Reading, Class 202","number":"202","id":"5970d4dd35e9e697410001cc"},"uri":"/v3.0/courses/5970d4dd35e9e697410001cc"},{"data":{"number":"203","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Reading, Class 203","id":"5970d4dd35e9e697410001cd"},"uri":"/v3.0/courses/5970d4dd35e9e697410001cd"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Science, Class 201","number":"201","id":"5970d4dd35e9e697410001ce"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ce"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Science, Class 202","number":"202","id":"5970d4dd35e9e697410001cf"},"uri":"/v3.0/courses/5970d4dd35e9e697410001cf"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Science, Class 203","number":"203","id":"5970d4dd35e9e697410001d0"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d0"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        2 Social Studies, Class 201","number":"201","id":"5970d4dd35e9e697410001d1"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d1"},{"data":{"name":"Grade
+        2 Social Studies, Class 202","number":"202","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001d2"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d2"},{"data":{"name":"Grade
+        2 Social Studies, Class 203","number":"203","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001d3"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d3"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Math, Class 301","number":"301","id":"5970d4dd35e9e697410001d4"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d4"},{"data":{"number":"302","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Math, Class 302","id":"5970d4dd35e9e697410001d5"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d5"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Math, Class 303","number":"303","id":"5970d4dd35e9e697410001d6"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d6"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Music, Class 301","number":"301","id":"5970d4dd35e9e697410001d7"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d7"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Music, Class 302","number":"302","id":"5970d4dd35e9e697410001d8"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d8"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Music, Class 303","number":"303","id":"5970d4dd35e9e697410001d9"},"uri":"/v3.0/courses/5970d4dd35e9e697410001d9"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Reading, Class 301","number":"301","id":"5970d4dd35e9e697410001da"},"uri":"/v3.0/courses/5970d4dd35e9e697410001da"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Reading, Class 302","number":"302","id":"5970d4dd35e9e697410001db"},"uri":"/v3.0/courses/5970d4dd35e9e697410001db"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Reading, Class 303","number":"303","id":"5970d4dd35e9e697410001dc"},"uri":"/v3.0/courses/5970d4dd35e9e697410001dc"},{"data":{"name":"Grade
+        3 Science, Class 301","number":"301","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001dd"},"uri":"/v3.0/courses/5970d4dd35e9e697410001dd"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Science, Class 302","number":"302","id":"5970d4dd35e9e697410001de"},"uri":"/v3.0/courses/5970d4dd35e9e697410001de"},{"data":{"number":"303","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Science, Class 303","id":"5970d4dd35e9e697410001df"},"uri":"/v3.0/courses/5970d4dd35e9e697410001df"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Social Studies, Class 301","number":"301","id":"5970d4dd35e9e697410001e0"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e0"},{"data":{"number":"302","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Social Studies, Class 302","id":"5970d4dd35e9e697410001e1"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e1"},{"data":{"number":"303","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        3 Social Studies, Class 303","id":"5970d4dd35e9e697410001e2"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e2"},{"data":{"number":"401","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Math, Class 401","id":"5970d4dd35e9e697410001e3"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e3"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Math, Class 402","number":"402","id":"5970d4dd35e9e697410001e4"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e4"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Math, Class 403","number":"403","id":"5970d4dd35e9e697410001e5"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e5"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Music, Class 401","number":"401","id":"5970d4dd35e9e697410001e6"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e6"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Music, Class 402","number":"402","id":"5970d4dd35e9e697410001e7"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e7"}],"links":[{"rel":"self","uri":"/v3.0/courses"},{"rel":"next","uri":"/v3.0/courses?starting_after=5970d4dd35e9e697410001e7"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/courses
+  recorded_at: Mon, 24 Apr 2023 22:43:34 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/courses?starting_after=5970d4dd35e9e697410001e7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:35 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '18022'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"4666-ShSkDxjecy0epCNvC3R4Tw"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '16'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1144'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 821877c8-6346-9ffc-bd5d-ca5af3e42780
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"number":"403","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Music, Class 403","id":"5970d4dd35e9e697410001e8"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e8"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Reading, Class 401","number":"401","id":"5970d4dd35e9e697410001e9"},"uri":"/v3.0/courses/5970d4dd35e9e697410001e9"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Reading, Class 402","number":"402","id":"5970d4dd35e9e697410001ea"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ea"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Reading, Class 403","number":"403","id":"5970d4dd35e9e697410001eb"},"uri":"/v3.0/courses/5970d4dd35e9e697410001eb"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Science, Class 401","number":"401","id":"5970d4dd35e9e697410001ec"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ec"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Science, Class 402","number":"402","id":"5970d4dd35e9e697410001ed"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ed"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Science, Class 403","number":"403","id":"5970d4dd35e9e697410001ee"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ee"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Social Studies, Class 401","number":"401","id":"5970d4dd35e9e697410001ef"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ef"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        4 Social Studies, Class 402","number":"402","id":"5970d4dd35e9e697410001f0"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f0"},{"data":{"name":"Grade
+        4 Social Studies, Class 403","number":"403","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001f1"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f1"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Math, Class 501","number":"501","id":"5970d4dd35e9e697410001f2"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f2"},{"data":{"number":"502","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Math, Class 502","id":"5970d4dd35e9e697410001f3"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f3"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Math, Class 503","number":"503","id":"5970d4dd35e9e697410001f4"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f4"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Music, Class 501","number":"501","id":"5970d4dd35e9e697410001f5"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f5"},{"data":{"number":"502","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Music, Class 502","id":"5970d4dd35e9e697410001f6"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f6"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Music, Class 503","number":"503","id":"5970d4dd35e9e697410001f7"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f7"},{"data":{"number":"501","district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Reading, Class 501","id":"5970d4dd35e9e697410001f8"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f8"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Reading, Class 502","number":"502","id":"5970d4dd35e9e697410001f9"},"uri":"/v3.0/courses/5970d4dd35e9e697410001f9"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Reading, Class 503","number":"503","id":"5970d4dd35e9e697410001fa"},"uri":"/v3.0/courses/5970d4dd35e9e697410001fa"},{"data":{"name":"Grade
+        5 Science, Class 501","number":"501","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e697410001fb"},"uri":"/v3.0/courses/5970d4dd35e9e697410001fb"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Science, Class 502","number":"502","id":"5970d4dd35e9e697410001fc"},"uri":"/v3.0/courses/5970d4dd35e9e697410001fc"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Science, Class 503","number":"503","id":"5970d4dd35e9e697410001fd"},"uri":"/v3.0/courses/5970d4dd35e9e697410001fd"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Social Studies, Class 501","number":"501","id":"5970d4dd35e9e697410001fe"},"uri":"/v3.0/courses/5970d4dd35e9e697410001fe"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Social Studies, Class 502","number":"502","id":"5970d4dd35e9e697410001ff"},"uri":"/v3.0/courses/5970d4dd35e9e697410001ff"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Grade
+        5 Social Studies, Class 503","number":"503","id":"5970d4dd35e9e69741000200"},"uri":"/v3.0/courses/5970d4dd35e9e69741000200"},{"data":{"name":"Group
+        Guidance","number":"901","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000207"},"uri":"/v3.0/courses/5970d4dd35e9e69741000207"},{"data":{"name":"Integrated
+        Algebra","number":"101","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000214"},"uri":"/v3.0/courses/5970d4dd35e9e69741000214"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Introduction
+        to Visual Arts","number":"100","id":"5970d4dd35e9e6974100021b"},"uri":"/v3.0/courses/5970d4dd35e9e6974100021b"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Journalism
+        Elective","number":"615","id":"5970d4dd35e9e6974100021e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100021e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Math, Class 001","number":"1","id":"5970d4dd35e9e69741000220"},"uri":"/v3.0/courses/5970d4dd35e9e69741000220"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Math, Class 002","number":"2","id":"5970d4dd35e9e69741000221"},"uri":"/v3.0/courses/5970d4dd35e9e69741000221"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Math, Class 003","number":"3","id":"5970d4dd35e9e69741000222"},"uri":"/v3.0/courses/5970d4dd35e9e69741000222"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Music, Class 001","number":"1","id":"5970d4dd35e9e69741000223"},"uri":"/v3.0/courses/5970d4dd35e9e69741000223"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Music, Class 002","number":"2","id":"5970d4dd35e9e69741000224"},"uri":"/v3.0/courses/5970d4dd35e9e69741000224"},{"data":{"name":"Kindergarten
+        Music, Class 003","number":"3","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000225"},"uri":"/v3.0/courses/5970d4dd35e9e69741000225"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Reading, Class 001","number":"1","id":"5970d4dd35e9e69741000226"},"uri":"/v3.0/courses/5970d4dd35e9e69741000226"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Reading, Class 002","number":"2","id":"5970d4dd35e9e69741000227"},"uri":"/v3.0/courses/5970d4dd35e9e69741000227"},{"data":{"name":"Kindergarten
+        Reading, Class 003","number":"3","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000228"},"uri":"/v3.0/courses/5970d4dd35e9e69741000228"},{"data":{"number":"1","district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Science, Class 001","id":"5970d4dd35e9e69741000229"},"uri":"/v3.0/courses/5970d4dd35e9e69741000229"},{"data":{"name":"Kindergarten
+        Science, Class 002","number":"2","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e6974100022a"},"uri":"/v3.0/courses/5970d4dd35e9e6974100022a"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Science, Class 003","number":"3","id":"5970d4dd35e9e6974100022b"},"uri":"/v3.0/courses/5970d4dd35e9e6974100022b"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Social Studies, Class 001","number":"1","id":"5970d4dd35e9e6974100022c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100022c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Social Studies, Class 002","number":"2","id":"5970d4dd35e9e6974100022d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100022d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Kindergarten
+        Social Studies, Class 003","number":"3","id":"5970d4dd35e9e6974100022e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100022e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Latin
+        Dance Elective","number":"616","id":"5970d4dd35e9e6974100022f"},"uri":"/v3.0/courses/5970d4dd35e9e6974100022f"},{"data":{"number":"617","district":"58da8a43cc70ab00017a1a87","name":"Lego
+        Robotics Elective","id":"5970d4dd35e9e69741000232"},"uri":"/v3.0/courses/5970d4dd35e9e69741000232"},{"data":{"name":"Living
+        Environment","number":"101","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000234"},"uri":"/v3.0/courses/5970d4dd35e9e69741000234"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 601","number":"601","id":"5970d4dd35e9e69741000238"},"uri":"/v3.0/courses/5970d4dd35e9e69741000238"},{"data":{"name":"Mathematics,
+        Class 602","number":"602","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000239"},"uri":"/v3.0/courses/5970d4dd35e9e69741000239"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 603","number":"603","id":"5970d4dd35e9e6974100023a"},"uri":"/v3.0/courses/5970d4dd35e9e6974100023a"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 701","number":"701","id":"5970d4dd35e9e6974100023b"},"uri":"/v3.0/courses/5970d4dd35e9e6974100023b"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 702","number":"702","id":"5970d4dd35e9e6974100023c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100023c"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 703","number":"703","id":"5970d4dd35e9e6974100023d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100023d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 801","number":"801","id":"5970d4dd35e9e6974100023e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100023e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 802","number":"802","id":"5970d4dd35e9e6974100023f"},"uri":"/v3.0/courses/5970d4dd35e9e6974100023f"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Mathematics,
+        Class 803","number":"803","id":"5970d4dd35e9e69741000240"},"uri":"/v3.0/courses/5970d4dd35e9e69741000240"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Media
+        Arts, Class 601","number":"601","id":"5970d4dd35e9e69741000241"},"uri":"/v3.0/courses/5970d4dd35e9e69741000241"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Media
+        Arts, Class 602","number":"602","id":"5970d4dd35e9e69741000242"},"uri":"/v3.0/courses/5970d4dd35e9e69741000242"},{"data":{"number":"603","district":"58da8a43cc70ab00017a1a87","name":"Media
+        Arts, Class 603","id":"5970d4dd35e9e69741000243"},"uri":"/v3.0/courses/5970d4dd35e9e69741000243"},{"data":{"name":"Media
+        Arts, Class 701","number":"701","district":"58da8a43cc70ab00017a1a87","id":"5970d4dd35e9e69741000244"},"uri":"/v3.0/courses/5970d4dd35e9e69741000244"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Media
+        Arts, Class 702","number":"702","id":"5970d4dd35e9e69741000245"},"uri":"/v3.0/courses/5970d4dd35e9e69741000245"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Media
+        Arts, Class 703","number":"703","id":"5970d4dd35e9e69741000246"},"uri":"/v3.0/courses/5970d4dd35e9e69741000246"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Musical
+        Theatre Elective","number":"618","id":"5970d4dd35e9e69741000248"},"uri":"/v3.0/courses/5970d4dd35e9e69741000248"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Ninth
+        Grade English","number":"101","id":"5970d4dd35e9e6974100024c"},"uri":"/v3.0/courses/5970d4dd35e9e6974100024c"},{"data":{"number":"601","district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 601","id":"5970d4dd35e9e6974100024d"},"uri":"/v3.0/courses/5970d4dd35e9e6974100024d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 602","number":"602","id":"5970d4dd35e9e6974100024e"},"uri":"/v3.0/courses/5970d4dd35e9e6974100024e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 603","number":"603","id":"5970d4de35e9e6974100024f"},"uri":"/v3.0/courses/5970d4de35e9e6974100024f"},{"data":{"name":"Physical
+        Education, Class 701","number":"701","district":"58da8a43cc70ab00017a1a87","id":"5970d4de35e9e69741000250"},"uri":"/v3.0/courses/5970d4de35e9e69741000250"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 702","number":"702","id":"5970d4de35e9e69741000251"},"uri":"/v3.0/courses/5970d4de35e9e69741000251"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 703","number":"703","id":"5970d4de35e9e69741000252"},"uri":"/v3.0/courses/5970d4de35e9e69741000252"},{"data":{"number":"801","district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 801","id":"5970d4de35e9e69741000253"},"uri":"/v3.0/courses/5970d4de35e9e69741000253"},{"data":{"number":"802","district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 802","id":"5970d4de35e9e69741000254"},"uri":"/v3.0/courses/5970d4de35e9e69741000254"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Class 803","number":"803","id":"5970d4de35e9e69741000255"},"uri":"/v3.0/courses/5970d4de35e9e69741000255"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Physical
+        Education, Group 9A","number":"101","id":"5970d4de35e9e6974100025c"},"uri":"/v3.0/courses/5970d4de35e9e6974100025c"},{"data":{"name":"School
+        Beautification Elective","number":"619","district":"58da8a43cc70ab00017a1a87","id":"5970d4de35e9e69741000264"},"uri":"/v3.0/courses/5970d4de35e9e69741000264"},{"data":{"number":"601","district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 601","id":"5970d4de35e9e69741000269"},"uri":"/v3.0/courses/5970d4de35e9e69741000269"},{"data":{"number":"602","district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 602","id":"5970d4de35e9e6974100026a"},"uri":"/v3.0/courses/5970d4de35e9e6974100026a"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 603","number":"603","id":"5970d4de35e9e6974100026b"},"uri":"/v3.0/courses/5970d4de35e9e6974100026b"},{"data":{"number":"701","district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 701","id":"5970d4de35e9e6974100026c"},"uri":"/v3.0/courses/5970d4de35e9e6974100026c"},{"data":{"name":"Science,
+        Class 702","number":"702","district":"58da8a43cc70ab00017a1a87","id":"5970d4de35e9e6974100026d"},"uri":"/v3.0/courses/5970d4de35e9e6974100026d"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 703","number":"703","id":"5970d4de35e9e6974100026e"},"uri":"/v3.0/courses/5970d4de35e9e6974100026e"},{"data":{"name":"Science,
+        Class 801","number":"801","district":"58da8a43cc70ab00017a1a87","id":"5970d4de35e9e6974100026f"},"uri":"/v3.0/courses/5970d4de35e9e6974100026f"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 802","number":"802","id":"5970d4de35e9e69741000270"},"uri":"/v3.0/courses/5970d4de35e9e69741000270"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Science,
+        Class 803","number":"803","id":"5970d4de35e9e69741000271"},"uri":"/v3.0/courses/5970d4de35e9e69741000271"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Set
+        Design Elective","number":"620","id":"5970d4de35e9e69741000273"},"uri":"/v3.0/courses/5970d4de35e9e69741000273"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Seventh
+        Grade Advisory","number":"701","id":"5970d4de35e9e69741000274"},"uri":"/v3.0/courses/5970d4de35e9e69741000274"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Seventh
+        Grade Advisory","number":"702","id":"5970d4de35e9e69741000275"},"uri":"/v3.0/courses/5970d4de35e9e69741000275"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Seventh
+        Grade Advisory","number":"703","id":"5970d4de35e9e69741000276"},"uri":"/v3.0/courses/5970d4de35e9e69741000276"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Sixth
+        Grade Advisory","number":"601","id":"5970d4de35e9e69741000277"},"uri":"/v3.0/courses/5970d4de35e9e69741000277"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Sixth
+        Grade Advisory","number":"602","id":"5970d4de35e9e69741000278"},"uri":"/v3.0/courses/5970d4de35e9e69741000278"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Sixth
+        Grade Advisory","number":"603","id":"5970d4de35e9e69741000279"},"uri":"/v3.0/courses/5970d4de35e9e69741000279"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 601","number":"601","id":"5970d4de35e9e6974100027a"},"uri":"/v3.0/courses/5970d4de35e9e6974100027a"},{"data":{"number":"602","district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 602","id":"5970d4de35e9e6974100027b"},"uri":"/v3.0/courses/5970d4de35e9e6974100027b"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 603","number":"603","id":"5970d4de35e9e6974100027c"},"uri":"/v3.0/courses/5970d4de35e9e6974100027c"},{"data":{"number":"701","district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 701","id":"5970d4de35e9e6974100027d"},"uri":"/v3.0/courses/5970d4de35e9e6974100027d"},{"data":{"number":"702","district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 702","id":"5970d4de35e9e6974100027e"},"uri":"/v3.0/courses/5970d4de35e9e6974100027e"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 703","number":"703","id":"5970d4de35e9e6974100027f"},"uri":"/v3.0/courses/5970d4de35e9e6974100027f"},{"data":{"number":"801","district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 801","id":"5970d4de35e9e69741000280"},"uri":"/v3.0/courses/5970d4de35e9e69741000280"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 802","number":"802","id":"5970d4de35e9e69741000281"},"uri":"/v3.0/courses/5970d4de35e9e69741000281"},{"data":{"district":"58da8a43cc70ab00017a1a87","name":"Social
+        Studies, Class 803","number":"803","id":"5970d4de35e9e69741000282"},"uri":"/v3.0/courses/5970d4de35e9e69741000282"}],"links":[{"rel":"self","uri":"/v3.0/courses?starting_after=5970d4dd35e9e697410001e7"},{"rel":"prev","uri":"/v3.0/courses?ending_before=5970d4dd35e9e697410001e8"},{"rel":"next","uri":"/v3.0/courses?starting_after=5970d4de35e9e69741000282"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/courses?starting_after=5970d4dd35e9e697410001e7
+  recorded_at: Mon, 24 Apr 2023 22:43:34 GMT
+recorded_with: VCR 6.1.0

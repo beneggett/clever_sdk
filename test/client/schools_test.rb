@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::SchoolsTest < CleverSDK::Test
   def test_schools
-    VCR.use_cassette("schools") do
+    VCR.use_cassette("client/schools") do
       schools = CleverSDK.client("TEST_TOKEN").schools
 
       assert_kind_of CleverSDK::Data::Schools, schools
@@ -33,7 +33,7 @@ class CleverSDK::Client::SchoolsTest < CleverSDK::Test
   end
 
   def test_schools_with_limit
-    VCR.use_cassette("schools_with_limit") do
+    VCR.use_cassette("client/schools_with_limit") do
       schools = CleverSDK.client("TEST_TOKEN").schools(limit: 3)
 
       assert_kind_of CleverSDK::Data::Schools, schools
@@ -43,7 +43,7 @@ class CleverSDK::Client::SchoolsTest < CleverSDK::Test
   end
 
   def test_schools_with_starting_after
-    VCR.use_cassette("schools_with_starting_after") do
+    VCR.use_cassette("client/schools_with_starting_after") do
       schools = CleverSDK.client("TEST_TOKEN").schools(starting_after: "58da8c58155b940248000007")
 
       assert_kind_of CleverSDK::Data::Schools, schools
@@ -53,7 +53,7 @@ class CleverSDK::Client::SchoolsTest < CleverSDK::Test
   end
 
   def test_schools_next
-    VCR.use_cassette("schools_next") do
+    VCR.use_cassette("client/schools_next") do
       schools = CleverSDK.client("TEST_TOKEN").schools(limit: 3)
 
       assert_kind_of CleverSDK::Data::Schools, schools

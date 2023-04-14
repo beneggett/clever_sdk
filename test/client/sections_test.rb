@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::SectionsTest < CleverSDK::Test
   def test_sections
-    VCR.use_cassette("sections") do
+    VCR.use_cassette("client/sections") do
       sections = CleverSDK.client("TEST_TOKEN").sections
 
       assert_kind_of CleverSDK::Data::Sections, sections
@@ -33,7 +33,7 @@ class CleverSDK::Client::SectionsTest < CleverSDK::Test
   end
 
   def test_sections_with_limit
-    VCR.use_cassette("sections_with_limit") do
+    VCR.use_cassette("client/sections_with_limit") do
       sections = CleverSDK.client("TEST_TOKEN").sections(limit: 25)
 
       assert_kind_of CleverSDK::Data::Sections, sections
@@ -43,7 +43,7 @@ class CleverSDK::Client::SectionsTest < CleverSDK::Test
   end
 
   def test_sections_with_starting_after
-    VCR.use_cassette("sections_with_starting_after") do
+    VCR.use_cassette("client/sections_with_starting_after") do
       sections = CleverSDK.client("TEST_TOKEN").sections(starting_after: "58da8c6b894273be68000255")
 
       assert_kind_of CleverSDK::Data::Sections, sections
@@ -74,7 +74,7 @@ class CleverSDK::Client::SectionsTest < CleverSDK::Test
   end
 
   def test_sections_next
-    VCR.use_cassette("sections_next") do
+    VCR.use_cassette("client/sections_next") do
       sections = CleverSDK.client("TEST_TOKEN").sections
 
       assert_kind_of CleverSDK::Data::Sections, sections

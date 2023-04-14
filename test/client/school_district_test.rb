@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::SchoolDistrictTest < CleverSDK::Test
   def test_school_district
-    VCR.use_cassette("school_district") do
+    VCR.use_cassette("client/school_district") do
       district = CleverSDK.client("TEST_TOKEN").school_district("58da8c58155b940248000007")
 
       assert_kind_of CleverSDK::Data::District, district
@@ -14,7 +14,7 @@ class CleverSDK::Client::SchoolDistrictTest < CleverSDK::Test
       assert_equal "sftp", district.sis_type
       assert_kind_of DateTime, district.last_sync
       assert_equal "https://clever.com/in/demo-certification3cc70ab00017a1a87", district.portal_url
-      assert_equal ["Clever Passwords"], district.login_methods
+      assert_equal ["Clever Badges", "Clever Passwords"], district.login_methods
       assert_kind_of Date, district.launch_date
       assert_nil district.pause_start
       assert_nil district.pause_end

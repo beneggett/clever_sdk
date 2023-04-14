@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://clever.com/oauth/tokeninfo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer ilc_DEMO_TEACHER_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '280'
+      date:
+      - Mon, 24 Apr 2023 22:43:36 GMT
+      x-dns-prefetch-control:
+      - 'off'
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-download-options:
+      - noopen
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      vary:
+      - Origin, Accept-Encoding
+      etag:
+      - W/"118-MZvEfzHAZm5XRjnpy3nDvUxxAZ8"
+      x-envoy-upstream-service-time:
+      - '13'
+      server:
+      - envoy
+      x-cache:
+      - Miss from cloudfront
+      via:
+      - 1.1 fb583d18c6b0f24d4447146b294e4f68.cloudfront.net (CloudFront)
+      x-amz-cf-pop:
+      - DEN52-P3
+      x-amz-cf-id:
+      - "-lSPLc4g74R4QNZcTELclHv7vwoNhKEM7bZrLCrQEyJiuQ4DapRnUg=="
+    body:
+      encoding: ASCII-8BIT
+      string: '{"client_id":"4c63c1cf623dce82caac","scopes":["read:district_admins_limited","read:ell_status","read:iep_status","read:school_admins_limited","read:sections_limited","read:student_contacts","read:students_launchpad","read:students_limited","read:teachers_limited","read:user_id"]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://clever.com/oauth/tokeninfo
+  recorded_at: Mon, 24 Apr 2023 22:43:36 GMT
+recorded_with: VCR 6.1.0

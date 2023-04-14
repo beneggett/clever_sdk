@@ -7,17 +7,17 @@ module CleverSDK
     attr_reader :code, :access_token, :user
     attr_accessor :configuration
 
-    # the whole reason of this SSO is to take a code and get an access token from it, then use that access token to retrieve user details. 
+    # the whole reason of this SSO is to take a code and get an access token from it, then use that access token to retrieve user details.
     def initialize(code, configuration = CleverSDK.configuration)
       yield configuration if block_given?
       @configuration = configuration
       @code = code.to_s
     end
 
-    def call 
+    def call
       @access_token = convert_code_to_access_token!
       @user = user_details_from_access_token(access_token)
-      self 
+      self
     end
 
     def to_h

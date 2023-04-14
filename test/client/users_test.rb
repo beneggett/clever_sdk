@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::UsersTest < CleverSDK::Test
   def test_users
-    VCR.use_cassette("users") do
+    VCR.use_cassette("client/users") do
       users = CleverSDK.client("TEST_TOKEN").users
 
       assert_kind_of CleverSDK::Data::Users, users
@@ -24,7 +24,7 @@ class CleverSDK::Client::UsersTest < CleverSDK::Test
   end
 
   def test_users_with_limit
-    VCR.use_cassette("users_with_limit") do
+    VCR.use_cassette("client/users_with_limit") do
       users = CleverSDK.client("TEST_TOKEN").users(limit: 25)
 
       assert_kind_of CleverSDK::Data::Users, users
@@ -46,7 +46,7 @@ class CleverSDK::Client::UsersTest < CleverSDK::Test
   end
 
   def test_users_with_starting_after
-    VCR.use_cassette("users_with_starting_after") do
+    VCR.use_cassette("client/users_with_starting_after") do
       users = CleverSDK.client("TEST_TOKEN").users(starting_after: "58da8c63d7dc0ca068000478")
 
       assert_kind_of CleverSDK::Data::Users, users
@@ -68,7 +68,7 @@ class CleverSDK::Client::UsersTest < CleverSDK::Test
   end
 
   def test_users_next
-    VCR.use_cassette("users_next") do
+    VCR.use_cassette("client/users_next") do
       users = CleverSDK.client("TEST_TOKEN").users
 
       assert_kind_of CleverSDK::Data::Users, users

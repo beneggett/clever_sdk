@@ -2,11 +2,11 @@ require "test_helper"
 
 class CleverSDK::Api::ResourcesTest < CleverSDK::Test
   def test_resources_app
-    VCR.use_cassette("resources_app") do
+    VCR.use_cassette("api/resources_app") do
       response = CleverSDK::Api.new.resources(access_token: "TEST_TOKEN")
 
       assert_equal 200, response.code
-      assert_equal(response.headers["content-type"], "application/json")
+      assert_equal("application/json", response.headers["content-type"])
       resources = response.body.dig("resources")
       assert resources
       assert_equal 0, resources.count
@@ -14,7 +14,7 @@ class CleverSDK::Api::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_student
-    VCR.use_cassette("resources_student") do
+    VCR.use_cassette("api/resources_student") do
       error = assert_raises CleverSDK::Error do
         CleverSDK::Api.new.resources(access_token: "ilc_DEMO_STUDENT_TOKEN")
       end
@@ -25,7 +25,7 @@ class CleverSDK::Api::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_teacher
-    VCR.use_cassette("resources_teacher") do
+    VCR.use_cassette("api/resources_teacher") do
       error = assert_raises CleverSDK::Error do
         CleverSDK::Api.new.resources(access_token: "ilc_DEMO_TEACHER_TOKEN")
       end
@@ -36,7 +36,7 @@ class CleverSDK::Api::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_school_admin
-    VCR.use_cassette("resources_school_admin") do
+    VCR.use_cassette("api/resources_school_admin") do
       error = assert_raises CleverSDK::Error do
         CleverSDK::Api.new.resources(access_token: "ilc_DEMO_SCHOOL_ADMIN_TOKEN")
       end
@@ -47,7 +47,7 @@ class CleverSDK::Api::ResourcesTest < CleverSDK::Test
   end
 
   def test_resources_district_admin
-    VCR.use_cassette("resources_district_admin") do
+    VCR.use_cassette("api/resources_district_admin") do
       error = assert_raises CleverSDK::Error do
         CleverSDK::Api.new.resources(access_token: "ilc_DEMO_DISTRICT_ADMIN_TOKEN")
       end

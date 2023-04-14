@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "clever_sdk/data/section/refs"
+
 module CleverSDK
   module Data
     class Section
@@ -82,6 +84,10 @@ module CleverSDK
         DateTime.parse(data.dig("last_modified"))
       rescue
         nil
+      end
+
+      def refs
+        @refs ||= CleverSDK::Data::Section::Refs.new(self)
       end
 
       def inspect

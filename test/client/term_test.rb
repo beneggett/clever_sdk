@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::TermTest < CleverSDK::Test
   def test_terms
-    VCR.use_cassette("term") do
+    VCR.use_cassette("client/term") do
       term = CleverSDK.client("TEST_TOKEN").term("5b42365868c8d6104f634d32")
 
       assert_kind_of CleverSDK::Data::Term, term

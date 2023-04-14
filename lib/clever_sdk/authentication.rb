@@ -2,6 +2,8 @@
 
 require "clever_sdk/api"
 require "clever_sdk/data/tokens"
+require "clever_sdk/data/tokeninfo"
+require "clever_sdk/data/me"
 
 module CleverSDK
   class Authentication
@@ -33,14 +35,13 @@ module CleverSDK
 
     def tokeninfo(access_token)
       response = Api.new.tokeninfo(access_token: access_token)
-      data = response.body.dig("data")
-      CleverSDK::Data::Token.new(data, response)
+      CleverSDK::Data::Tokeninfo.new(response.body, response)
     end
 
     def me(access_token)
       response = Api.new.me(access_token: access_token)
       data = response.body.dig("data")
-      CleverSDK::Data::Token.new(data, response)
+      CleverSDK::Data::Me.new(data, response)
     end
 
     def inspect

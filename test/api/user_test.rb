@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Api::UserTest < CleverSDK::Test
   def test_user
-    VCR.use_cassette("user") do
+    VCR.use_cassette("api/user") do
       response = CleverSDK::Api.new.user(access_token: "TEST_TOKEN", id: "58da8c63d7dc0ca068000478")
 
       assert_equal 200, response.code

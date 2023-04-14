@@ -2,7 +2,7 @@ require "test_helper"
 
 class CleverSDK::Client::CourseSchoolsTest < CleverSDK::Test
   def test_course_schools
-    VCR.use_cassette("course_schools") do
+    VCR.use_cassette("client/course_schools") do
       schools = CleverSDK.client("TEST_TOKEN").course_schools("5970d4dd35e9e69741000160")
 
       assert_kind_of CleverSDK::Data::Schools, schools
