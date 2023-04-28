@@ -25,7 +25,7 @@ module CleverSDK
       end
 
       def inspect
-        "#<#{self.class.name}(#{id}) #{access_token}>"
+        "#<#{self.class.name}(#{id}:#{type})>"
       end
 
       alias_method :to_h, :data

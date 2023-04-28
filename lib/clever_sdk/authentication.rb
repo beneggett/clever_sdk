@@ -4,6 +4,7 @@ require "clever_sdk/api"
 require "clever_sdk/data/tokens"
 require "clever_sdk/data/tokeninfo"
 require "clever_sdk/data/me"
+require "clever_sdk/data/sso"
 
 module CleverSDK
   class Authentication
@@ -42,6 +43,21 @@ module CleverSDK
       response = Api.new.me(access_token: access_token)
       data = response.body.dig("data")
       CleverSDK::Data::Me.new(data, response)
+    end
+
+    def sso(code)
+      response = Api.new.tokens!(
+        code: code,
+        grant_type: "authorization_code",
+        client_id: configuration.client_id,
+        client_secret: configuration.client_secret,
+        redirect_uri: configuration.redirect_uri
+      )
+      CleverSDK::Data::SSO.new(code, response)
+    end
+
+    def sso_redirect_uri
+      "https://clever.com/oauth/authorize?response_type=code&redirect_uri=#{configuration.redirect_uri}&client_id=#{configuration.client_id}"
     end
 
     def inspect
