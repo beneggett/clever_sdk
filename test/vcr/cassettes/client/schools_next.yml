@@ -1,0 +1,138 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/schools?limit=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:52:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1892'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"764-8xnkGiLa3oUamklK/lqHqg"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '19'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1199'
+      x-ratelimit-reset:
+      - '1682376824'
+      x-request-id:
+      - 4f95783f-88c2-966a-96d9-37edcc8e276b
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"high_grade":"5","school_number":"13K123","location":{"address":"110
+        Pineapple Street","city":"Brooklyn","state":"NY","zip":"11201"},"last_modified":"2023-04-23T16:07:28.860Z","name":"Pineapple
+        Elementary School","phone":"(718) 555-4567","district":"58da8a43cc70ab00017a1a87","sis_id":"13K123","created":"2023-04-12T23:04:53.490Z","ext":{"charter_school":"N"},"principal":{"email":"ceciliar@mailinator.com","name":"Cecilia
+        Roderick"},"low_grade":"TransitionalKindergarten","state_id":"30890","id":"58da8c58155b940248000007"},"uri":"/v3.0/schools/58da8c58155b940248000007"},{"data":{"created":"2023-04-12T23:04:53.492Z","last_modified":"2023-04-23T16:07:28.863Z","name":"Rockaway
+        Beach Middle School","ext":{"charter_school":"Y"},"school_number":"27Q321","phone":"(718)
+        555-8989","sis_id":"27Q321","low_grade":"6","state_id":"412","high_grade":"8","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"district":"58da8a43cc70ab00017a1a87","id":"58da8c58155b940248000008"},"uri":"/v3.0/schools/58da8c58155b940248000008"},{"data":{"district":"58da8a43cc70ab00017a1a87","low_grade":"6","principal":{"email":"lspringsteen@mailinator.com","name":"Leonard
+        Springsteen"},"phone":"(718) 555-8989","high_grade":"8","state_id":"413","school_number":"2ZR351","sis_id":"2ZR351","ext":{"charter_school":""},"last_modified":"2023-04-20T16:08:58.898Z","location":{"address":"322
+        Old Beach 88th Street","city":"Rockaway Beach","state":"NY","zip":"11693"},"name":"Rockaway
+        Beach Middle School Campus 2","created":"2023-04-12T23:04:53.494Z","id":"58da8c58155b940248000009"},"uri":"/v3.0/schools/58da8c58155b940248000009"}],"links":[{"rel":"self","uri":"/v3.0/schools?limit=3"},{"rel":"next","uri":"/v3.0/schools?limit=3&starting_after=58da8c58155b940248000009"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/schools?limit=3
+  recorded_at: Mon, 24 Apr 2023 22:52:44 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/schools?limit=3&starting_after=58da8c58155b940248000009
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:52:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '773'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"305-Dqh8aHueQ21VRUytkFFuiw"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '20'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1198'
+      x-ratelimit-reset:
+      - '1682376824'
+      x-request-id:
+      - ce49935a-50c9-9921-bc3e-37038731f4ae
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"high_grade":"8","sis_id":"2ZT381","principal":{"name":"Leonard
+        Springsteen","email":"lspringsteen@mailinator.com"},"school_number":"2ZT381","ext":{"charter_school":""},"district":"58da8a43cc70ab00017a1a87","name":"Rockaway
+        Beach Middle School Campus 3","low_grade":"6","phone":"(718) 555-8989","last_modified":"2023-04-20T16:08:58.902Z","created":"2023-04-12T23:04:53.496Z","state_id":"414","location":{"state":"NY","zip":"11693","address":"322
+        Old Beach 88th Street","city":"Rockaway Beach"},"id":"58da8c58155b94024800000a"},"uri":"/v3.0/schools/58da8c58155b94024800000a"}],"links":[{"rel":"self","uri":"/v3.0/schools?limit=3&starting_after=58da8c58155b940248000009"},{"rel":"prev","uri":"/v3.0/schools?limit=3&ending_before=58da8c58155b94024800000a"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/schools?limit=3&starting_after=58da8c58155b940248000009
+  recorded_at: Mon, 24 Apr 2023 22:52:44 GMT
+recorded_with: VCR 6.1.0

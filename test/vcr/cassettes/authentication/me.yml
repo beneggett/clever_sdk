@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer ilc_DEMO_TEACHER_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:40 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '97'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"61-AwqL+qrfGYiYQGkFV/VdyPjPCA8"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '11'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1196'
+      x-ratelimit-reset:
+      - '1682376275'
+      x-request-id:
+      - ab80078c-07e8-9c2b-a61d-ef837316ac0f
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"58da8c5da7a7e5a647000094","district":"58da8a43cc70ab00017a1a87","type":"teacher"}}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/me
+  recorded_at: Mon, 24 Apr 2023 22:43:40 GMT
+recorded_with: VCR 6.1.0

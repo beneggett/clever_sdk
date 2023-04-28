@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/sections/58da8c6a894273be68000182/district
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:37 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '586'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"24a-iG2fCVe6Rs/fcAzscYZ2uA"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '22'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1132'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - e9bad98f-c24d-90bc-ad18-561cd575ecdc
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"login_methods":["Clever Badges","Clever Passwords"],"sis_type":"sftp","state":"running","error":"","last_sync":"2023-04-23T16:08:05.652Z","portal_url":"https://clever.com/in/demo-certification3cc70ab00017a1a87","district_contact":{"district":"58da8a43cc70ab00017a1a87","email":"amelie.zeng+certification@clever.com","name":{"last":"Zeng","first":"Amelie"},"title":"","id":"58da8a43ca1f1e0001aa4220"},"name":"#DEMO
+        Certification ISD - Events","launch_date":"2017-07-31","id":"58da8a43cc70ab00017a1a87"},"links":[{"rel":"self","uri":"/v3.0/districts/58da8a43cc70ab00017a1a87"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/sections/58da8c6a894273be68000182/district
+  recorded_at: Mon, 24 Apr 2023 22:43:37 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/users/58da8c63d7dc0ca0680003ed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1173'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"495-9HoRiE+oaPoZcxYQBZArEQ"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '24'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1081'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 04eda84b-7d29-95cf-9b14-d7ca3a88f848
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"created":"2023-04-12T23:05:01.315Z","district":"58da8a43cc70ab00017a1a87","email":"z.steve@example.net","last_modified":"2023-04-12T23:05:01.315Z","name":{"first":"Steve","last":"Ziemann","middle":"G"},"id":"58da8c63d7dc0ca0680003ed","roles":{"student":{"credentials":{"district_username":"stevez33"},"dob":"2/11/2007","enrollments":[],"ext":{"gifted_status":""},"gender":"M","grade":"Kindergarten","graduation_year":"","hispanic_ethnicity":"Y","location":{"address":"","city":"","state":"","zip":"10459"},"race":"Black
+        or African American","school":"58da8c58155b940248000007","schools":["58da8c58155b940248000007"],"sis_id":"100095233","state_id":"231786324","student_number":"100095233","email":"z.steve@example.net"}}},"links":[{"rel":"self","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed"},{"rel":"district","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed/district"},{"rel":"sections","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed/sections"},{"rel":"myContacts","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed/myContacts"},{"rel":"myTeachers","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed/myTeachers"},{"rel":"schools","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed/schools"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/users/58da8c63d7dc0ca0680003ed
+  recorded_at: Mon, 24 Apr 2023 22:43:42 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/users/58da8c63d7dc0ca0680003ed/mycontacts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '574'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"23e-lM9k8C4AsHcXvEF+0mzxCA"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '68'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1080'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - dea8251a-77c9-9785-acff-08e2b8be2d54
+    body:
+      encoding: ASCII-8BIT
+      string: '{"links":[{"rel":"self","uri":"/v3.0/users/58da8c63d7dc0ca0680003ed/mycontacts"}],"data":[{"data":{"created":"2023-04-12T23:05:05.757Z","district":"58da8a43cc70ab00017a1a87","email":"becker_sanjiv@example.org","last_modified":"2023-04-12T23:05:05.757Z","name":{"last":"Sanjiv
+        Becker"},"id":"5faac8b9bc447500a10aebe8","roles":{"contact":{"phone":"","phone_type":"Other","sis_id":"","student_relationships":[{"relationship":"Other","student":"58da8c63d7dc0ca0680003ed","type":"Family"}],"legacy_id":"59b5635060b900b77f0003ec"}}},"uri":"/v3.0/users/5faac8b9bc447500a10aebe8"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/users/58da8c63d7dc0ca0680003ed/mycontacts
+  recorded_at: Mon, 24 Apr 2023 22:43:42 GMT
+recorded_with: VCR 6.1.0

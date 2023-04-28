@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/terms?limit=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '710'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"2c6-3Ds/XTEpXRWYw4y6o8lCzQ"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '16'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1090'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 5c5c134f-7933-99a1-b9e4-6a0356cf96f2
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"data":{"district":"58da8a43cc70ab00017a1a87","end_date":"2012-12-01","name":"S1","start_date":"2012-08-01","id":"5b42365868c8d6104f634d32"},"uri":"/v3.0/terms/5b42365868c8d6104f634d32"},{"data":{"district":"58da8a43cc70ab00017a1a87","end_date":"2013-06-01","name":"S2","start_date":"2012-12-02","id":"5b42365868c8d6104f634d33"},"uri":"/v3.0/terms/5b42365868c8d6104f634d33"},{"data":{"end_date":"2013-06-01","name":"Y1","start_date":"2012-08-01","district":"58da8a43cc70ab00017a1a87","id":"5b42365868c8d6104f634d34"},"uri":"/v3.0/terms/5b42365868c8d6104f634d34"}],"links":[{"rel":"self","uri":"/v3.0/terms?limit=3"},{"rel":"next","uri":"/v3.0/terms?limit=3&starting_after=5b42365868c8d6104f634d34"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/terms?limit=3
+  recorded_at: Mon, 24 Apr 2023 22:43:42 GMT
+recorded_with: VCR 6.1.0

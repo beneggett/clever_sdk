@@ -1,10 +1,10 @@
-[![Gem Version](https://badge.fury.io/rb/clever_api.svg)](https://badge.fury.io/rb/clever_api)
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/beneggett/clever_api/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/beneggett/clever_api/tree/main)
-[![Coverage Status](https://coveralls.io/repos/github/beneggett/clever_api/badge.svg?branch=master)](https://coveralls.io/github/beneggett/clever_api?branch=main)
+[![Gem Version](https://badge.fury.io/rb/clever_sdk.svg)](https://badge.fury.io/rb/clever_sdk)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/beneggett/clever_sdk/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/beneggett/clever_sdk/tree/main)
+[![Coverage Status](https://coveralls.io/repos/github/beneggett/clever_sdk/badge.svg?branch=master)](https://coveralls.io/github/beneggett/clever_sdk?branch=main)
 
-# Clever Api
+# CleverSDK
 
-Fully Implements the Clever API in Ruby
+Fully Implements the Clever API in a simple to use SDK in Ruby
 
 
 ## Installation
@@ -12,7 +12,7 @@ Fully Implements the Clever API in Ruby
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'clever_api'
+gem 'clever_sdk'
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install clever_api
+    $ gem install clever_sdk
 
 Be sure to define your Clever credentials by setting up environment variables in your application appropriately. Refer to the .env.sample file for details.
 ```
@@ -40,7 +40,7 @@ Place the following configuration in your apps initializer
 
 
 ```ruby
-CleverApi.configure do |config|
+CleverSDK.configure do |config|
   config.clever_id     = "your-value"
   config.clever_secret = "your-value"
   config.redirect_uri  = "your-value"  
@@ -55,7 +55,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/beneggett/clever_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/beneggett/clever_sdk. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -63,4 +63,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CleverApi project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/beneggett/clever_api/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the CleverSDK project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/beneggett/clever_sdk/blob/main/CODE_OF_CONDUCT.md).

@@ -1,0 +1,187 @@
+---
+comment: This file is created by hand, because the available test credentials don't work with the post tokens endpoint.
+http_interactions:
+- request:
+    method: post
+    uri: https://clever.com/oauth/tokens
+    body:
+      encoding: UTF-8
+      string: '{"code":"notarealssotoken","grant_type":"authorization_code","redirect_uri":"http://localhost:3000/auth/clever"}'
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Basic MDk1YjgyY2JiZDhjNjg3MTRkMWM6NGIzMzg0ODljZWI0YmVjMzYyNDYxYTdjOTZlM2FhNjA5ZWZmZjA0OQ==
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '81'
+      date:
+      - Thu, 27 Apr 2023 23:14:22 GMT
+      x-dns-prefetch-control:
+      - 'off'
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-download-options:
+      - noopen
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      vary:
+      - X-HTTP-Method-Override, Accept-Encoding
+      etag:
+      - W/"51-pKJYSoz8DcisRhuLzjS9N2Oo1Hs"
+      x-envoy-upstream-service-time:
+      - '27'
+      server:
+      - envoy
+      x-cache:
+      - Miss from cloudfront
+      via:
+      - 1.1 fb583d18c6b0f24d4447146b294e4f68.cloudfront.net (CloudFront)
+      x-amz-cf-pop:
+      - DEN52-P3
+      x-amz-cf-id:
+      - Bh8CwUAv3wn4giRxVQ8fXWrc2OLWWAk28U1PAal6Wpqux4N_JMk0sw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"ilc_DEMO_TEACHER_TOKEN","token_type":"bearer"}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://clever.com/oauth/tokens
+  recorded_at: Thu, 27 Apr 2023 23:14:22 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer ilc_DEMO_TEACHER_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Thu, 27 Apr 2023 23:14:23 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '305'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"131-05qyF4AiQidcuKLwBEjc65N6lC8"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '63'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1199'
+      x-ratelimit-reset:
+      - '1682637323'
+      x-request-id:
+      - 8ea68507-6bfc-945a-ba27-8e31de1735b5
+    body:
+      encoding: ASCII-8BIT
+      string: '{"type":"user","data":{"id":"5faac8b7bc447500a10ae857","district":"58da8a43cc70ab00017a1a87","type":"teacher","authorized_by":"district"},"links":[{"rel":"self","uri":"/me"},{"rel":"canonical","uri":"/v3.0/users/5faac8b7bc447500a10ae857"},{"rel":"district","uri":"/v3.0/districts/58da8a43cc70ab00017a1a87"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/me
+  recorded_at: Thu, 27 Apr 2023 23:14:23 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/users/5faac8b7bc447500a10ae857
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer ilc_DEMO_TEACHER_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Thu, 27 Apr 2023 23:14:23 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '558'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"22e-Nl3gGq/dn1olssRhSa1o4e2S/Ns"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '86'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1198'
+      x-ratelimit-reset:
+      - '1682637323'
+      x-request-id:
+      - '09dadc12-8a2e-9547-bbb3-7da61e7e4232'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"created":"2023-04-07T16:21:01.441Z","district":"58da8a43cc70ab00017a1a87","email":"robin_plant@example.org","id":"5faac8b7bc447500a10ae857","last_modified":"2023-03-26T16:08:09.909Z","name":{"first":"Robin","last":"Plant","middle":"M"},"roles":{"teacher":{"credentials":{"district_username":"plant_robin"},"ext":{"admin_permissions":"Y"},"legacy_id":"58da8c5da7a7e5a6470000a1","school":"58da8c58155b940248000007","schools":["58da8c58155b940248000007"],"sis_id":"77","state_id":"114182024","teacher_number":"532771","title":"High School Arts Teacher"}}}}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/users/5faac8b7bc447500a10ae857
+  recorded_at: Thu, 27 Apr 2023 23:14:23 GMT
+recorded_with: VCR 6.1.0

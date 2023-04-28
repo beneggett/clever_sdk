@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/sections/58da8c6a894273be68000182
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:31 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1651'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"673-vmvLQQS2gUZx5BD+obGoQA"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '32'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1184'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 5fc298a4-7279-9dd6-a65e-9f22d22ff314
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"course":"5970d4de35e9e69741000277","created":"2023-04-12T23:05:00.310Z","district":"58da8a43cc70ab00017a1a87","ext":{"classroom":"A1"},"grade":"6","last_modified":"2023-04-23T16:07:31.465Z","name":"Sixth
+        Grade Advisory - Madison - 4","period":"4","school":"58da8c58155b940248000008","section_number":"","sis_id":"587","students":["58da8c63d7dc0ca06800040a","58da8c63d7dc0ca068000425","58da8c63d7dc0ca06800043b","58da8c63d7dc0ca068000452","58da8c63d7dc0ca068000467","58da8c64d7dc0ca06800059c","58da8c64d7dc0ca0680005cb","58da8c64d7dc0ca0680005cf","58da8c64d7dc0ca0680005e6","58da8c64d7dc0ca068000614","58da8c64d7dc0ca06800062a","58da8c64d7dc0ca068000670","58da8c65d7dc0ca06800068c","58da8c65d7dc0ca0680006bc","58da8c65d7dc0ca0680006bf","58da8c65d7dc0ca0680006ca","58da8c65d7dc0ca0680006f5","58da8c65d7dc0ca06800072b","58da8c65d7dc0ca06800073b","58da8c65d7dc0ca068000745","58da8c65d7dc0ca068000764","58da8c65d7dc0ca068000766","58da8c65d7dc0ca06800079c","58da8c65d7dc0ca0680007bb","58da8c65d7dc0ca0680007ce","58da8c65d7dc0ca0680007d7"],"subject":"homeroom/advisory","teacher":"5faac8b7bc447500a10ae88f","teachers":["5faac8b7bc447500a10ae88f"],"term_id":"5b42365868c8d6104f634d34","id":"58da8c6a894273be68000182"},"links":[{"rel":"self","uri":"/v3.0/sections/58da8c6a894273be68000182"},{"rel":"district","uri":"/v3.0/sections/58da8c6a894273be68000182/district"},{"rel":"school","uri":"/v3.0/sections/58da8c6a894273be68000182/school"},{"rel":"term","uri":"/v3.0/sections/58da8c6a894273be68000182/term"},{"rel":"course","uri":"/v3.0/sections/58da8c6a894273be68000182/course"},{"rel":"users","uri":"/v3.0/sections/58da8c6a894273be68000182/users"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/sections/58da8c6a894273be68000182
+  recorded_at: Mon, 24 Apr 2023 22:43:30 GMT
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/sections/58da8c6a894273be68000182/resources
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:31 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '16'
+      access-control-allow-methods:
+      - GET
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      clever-request-id:
+      - '00000000000000000000000000000000'
+      content-security-policy:
+      - frame-ancestors 'none'
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-envoy-upstream-service-time:
+      - '59'
+      x-frame-options:
+      - DENY
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1183'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 9a35f1c7-0ef6-9514-aa8c-1d6c1c519457
+    body:
+      encoding: ASCII-8BIT
+      string: '{"resources":[]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/sections/58da8c6a894273be68000182/resources
+  recorded_at: Mon, 24 Apr 2023 22:43:31 GMT
+recorded_with: VCR 6.1.0

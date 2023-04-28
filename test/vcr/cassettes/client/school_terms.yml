@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clever.com/v3.0/schools/58da8c58155b940248000007/terms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer TEST_TOKEN
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 24 Apr 2023 22:43:31 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '952'
+      access-control-allow-headers:
+      - Content-Type,Authorization,X-Requested-With,Accept,Origin,Referer,User-Agent
+      access-control-allow-methods:
+      - GET,PATCH,POST,DELETE
+      access-control-allow-origin:
+      - "*"
+      cache-control:
+      - no-store
+      etag:
+      - W/"3b8-tIwTBuIt1wFLlUWjlI7/7A"
+      server:
+      - envoy
+      strict-transport-security:
+      - max-age=15552000; includeSubDomains
+      x-envoy-upstream-service-time:
+      - '39'
+      x-powered-by:
+      - Express
+      x-ratelimit-bucket:
+      - bearer
+      x-ratelimit-limit:
+      - '1200'
+      x-ratelimit-remaining:
+      - '1177'
+      x-ratelimit-reset:
+      - '1682376269'
+      x-request-id:
+      - 5f233a1a-5529-90a6-93ad-24fd0e3bd0fa
+    body:
+      encoding: ASCII-8BIT
+      string: '{"links":[{"rel":"self","uri":"/v3.0/schools/58da8c58155b940248000007/terms"}],"data":[{"data":{"district":"58da8a43cc70ab00017a1a87","end_date":"2013-06-01T00:00:00.000Z","name":"S2","start_date":"2012-12-02T00:00:00.000Z","id":"5b42365868c8d6104f634d33"},"uri":"/v3.0/terms/5b42365868c8d6104f634d33"},{"data":{"district":"58da8a43cc70ab00017a1a87","end_date":"2013-06-01T00:00:00.000Z","name":"Y1","start_date":"2012-08-01T00:00:00.000Z","id":"5b42365868c8d6104f634d34"},"uri":"/v3.0/terms/5b42365868c8d6104f634d34"},{"data":{"district":"58da8a43cc70ab00017a1a87","end_date":"2017-06-01T00:00:00.000Z","name":"Y1","start_date":"2016-08-01T00:00:00.000Z","id":"5b42365868c8d6104f634d35"},"uri":"/v3.0/terms/5b42365868c8d6104f634d35"},{"data":{"district":"58da8a43cc70ab00017a1a87","end_date":"2018-06-01T00:00:00.000Z","name":"Y1","start_date":"2017-08-01T00:00:00.000Z","id":"5b42365868c8d6104f634d36"},"uri":"/v3.0/terms/5b42365868c8d6104f634d36"}]}'
+    http_version: '2'
+    adapter_metadata:
+      effective_url: https://api.clever.com/v3.0/schools/58da8c58155b940248000007/terms
+  recorded_at: Mon, 24 Apr 2023 22:43:31 GMT
+recorded_with: VCR 6.1.0
