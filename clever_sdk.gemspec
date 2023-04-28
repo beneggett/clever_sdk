@@ -5,7 +5,7 @@ require "clever_sdk/version"
 Gem::Specification.new do |spec|
   spec.name = "clever_sdk"
   spec.version = CleverSDK::VERSION
-  spec.authors = ["Ben Eggett"]
+  spec.authors = ["Ben Eggett", "Mike Moore"]
   spec.email = ["beneggett@gmail.com"]
 
   spec.summary = "Clever API ruby wrapper"
