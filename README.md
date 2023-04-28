@@ -1,6 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/clever_sdk.svg)](https://badge.fury.io/rb/clever_sdk)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/beneggett/clever_sdk/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/beneggett/clever_sdk/tree/main)
-[![Coverage Status](https://coveralls.io/repos/github/beneggett/clever_sdk/badge.svg?branch=master)](https://coveralls.io/github/beneggett/clever_sdk?branch=main)
 
 # CleverSDK
 
