@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module CleverSDK
-  VERSION = "0.9.0-pre"
+  VERSION = "1.0.0"
 end
