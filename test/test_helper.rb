@@ -20,7 +20,7 @@ require "vcr"
 
 VCR.configure do |config|
   config.cassette_library_dir = "test/vcr/cassettes"
-  config.hook_into :typhoeus
+  config.hook_into :faraday
 end
 
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)

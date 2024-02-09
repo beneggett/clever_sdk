@@ -17,7 +17,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
         CleverSDK.client("ilc_DEMO_STUDENT_TOKEN").resources
       end
 
-      assert_equal 404, error.response.code
+      assert_equal 404, error.response.status
       assert_equal "text/html; charset=utf-8", error.response.headers["content-type"]
     end
   end
@@ -28,7 +28,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
         CleverSDK.client("ilc_DEMO_TEACHER_TOKEN").resources
       end
 
-      assert_equal 404, error.response.code
+      assert_equal 404, error.response.status
       assert_equal "text/html; charset=utf-8", error.response.headers["content-type"]
     end
   end
@@ -39,7 +39,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
         CleverSDK.client("ilc_DEMO_SCHOOL_ADMIN_TOKEN").resources
       end
 
-      assert_equal 404, error.response.code
+      assert_equal 404, error.response.status
       assert_equal "text/html; charset=utf-8", error.response.headers["content-type"]
     end
   end
@@ -50,7 +50,7 @@ class CleverSDK::Client::ResourcesTest < CleverSDK::Test
         CleverSDK.client("ilc_DEMO_DISTRICT_ADMIN_TOKEN").resources
       end
 
-      assert_equal 404, error.response.code
+      assert_equal 404, error.response.status
       assert_equal "text/html; charset=utf-8", error.response.headers["content-type"]
     end
   end

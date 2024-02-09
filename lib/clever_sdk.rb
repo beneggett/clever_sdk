@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "typhoeus"
+require "faraday"
 require "json"
 
 require "clever_sdk/configuration"

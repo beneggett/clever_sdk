@@ -7,15 +7,16 @@ module CleverSDK
       def districts(access_token:, count: nil)
         get(
           "https://api.clever.com/v3.0/districts",
-          params: params(count: count),
-          headers: bearer_headers(access_token)
+          params(count: count),
+          bearer_headers(access_token)
         )
       end
 
       def district(access_token:, id:)
         get(
           "https://api.clever.com/v3.0/districts/#{id}",
-          headers: bearer_headers(access_token)
+          {},
+          bearer_headers(access_token)
         )
       end
     end
