@@ -9,16 +9,17 @@ module CleverSDK
 
         get(
           "https://api.clever.com/v3.0/events",
-          params: params(limit: limit, starting_after: starting_after, ending_before: ending_before,
+          params(limit: limit, starting_after: starting_after, ending_before: ending_before,
             school: school, record_type: record_type),
-          headers: bearer_headers(access_token)
+          bearer_headers(access_token)
         )
       end
 
       def event(access_token:, id:)
         get(
           "https://api.clever.com/v3.0/events/#{id}",
-          headers: bearer_headers(access_token)
+          {},
+          bearer_headers(access_token)
         )
       end
     end

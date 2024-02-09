@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://clever.com/oauth/tokens?owner_type=district&district=58da8a43cc70ab00017a1a87
+    uri: https://clever.com/oauth/tokens?district=58da8a43cc70ab00017a1a87&owner_type=district
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Typhoeus - https://github.com/typhoeus/typhoeus
+      - Faraday v1.10.3
       Accept:
       - application/json
       Authorization:

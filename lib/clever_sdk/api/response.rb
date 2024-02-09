@@ -3,10 +3,10 @@
 module CleverSDK
   class Api
     class Response
-      def self.handle(typhoeus_response)
-        return CleverSDK::Api::Response.new(typhoeus_response) if typhoeus_response.success?
+      def self.handle(faraday_response)
+        return CleverSDK::Api::Response.new(faraday_response) if faraday_response.success?
 
-        raise CleverSDK::Error.handle(typhoeus_response)
+        raise CleverSDK::Error.handle(faraday_response)
       end
 
       def self.status_code_explanations
@@ -25,12 +25,12 @@ module CleverSDK
         }
       end
 
-      def initialize(typhoeus_response)
-        @_response = typhoeus_response
+      def initialize(faraday_response)
+        @_response = faraday_response
       end
 
       def raw_request
-        @_response.request
+        @_response.env.request
       end
 
       def raw_response
@@ -38,7 +38,7 @@ module CleverSDK
       end
 
       def code
-        @_response.code
+        @_response.status
       end
 
       def headers
@@ -52,7 +52,7 @@ module CleverSDK
 
       def access_token
         # Dig the access token out of the response object.
-        @_response.request.options.dig(:headers, "Authorization").split(" ").last
+        @_response.env.request_headers["Authorization"].split(" ").last
       end
     end
   end

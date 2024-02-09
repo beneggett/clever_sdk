@@ -40,5 +40,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "vcr"
-  spec.add_dependency "typhoeus"
+  spec.add_dependency "faraday", "~> 1.8"
 end

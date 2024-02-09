@@ -36,23 +36,22 @@ module CleverSDK
     def page(access_token:, path:)
       get(
         "https://api.clever.com#{path}",
-        headers: bearer_headers(access_token)
+        {},
+        bearer_headers(access_token)
       )
     end
 
     private
 
-    def get url, **kwargs
-      run(url, method: :get, **kwargs)
-    end
-
-    def post url, **kwargs
-      run(url, method: :post, **kwargs)
-    end
-
-    def run url, **kwargs
+    def get url, params = nil, headers = nil
       CleverSDK::Api::Response.handle(
-        Typhoeus::Request.new(url, **kwargs).run
+        Faraday.get url, params, headers
+      )
+    end
+
+    def post url, body = nil, headers = nil
+      CleverSDK::Api::Response.handle(
+        Faraday.post url, body, headers
       )
     end
 
